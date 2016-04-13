@@ -13,7 +13,7 @@ Some of it's features will include:
 
 For the complete list of features see: [Wiki - Planned features](https://github.com/mango-team/mango/wiki/Planned-features).
 
-
+iOS and Android versions of the website is also planned using [React Native](https://facebook.github.io/react-native/).
 
 ## Contribution Guides
 
