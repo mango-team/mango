@@ -1,0 +1,55 @@
+/* Main CSS */
+
+/* 
+***********************SUMMARY***********************
+App
+Header
+Page content
+Footer
+*/
+
+/* App */
+#app {
+    margin: auto;
+    width: 80%;
+    padding: 10px;
+}
+
+/* Header */
+.header {
+    text-align: inline;
+    background-color : indianred;
+}
+
+.header .logo a:active{
+    color : black;
+    text-decoration: none;
+}
+
+.header .logo a:hover{
+    color : black;    
+    text-decoration: none;
+}
+
+.header .logo a:link{
+    color : black;    
+    text-decoration: none;
+}
+
+.header .logo a:visited{
+    color : black;
+    text-decoration: none;
+}
+
+/* Page content */
+
+.pageContent {
+    background-color : lightblue;
+}
+
+
+/* Footer */
+.footer {
+    background-color : lightgreen;
+}
+

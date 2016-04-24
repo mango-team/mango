@@ -11,7 +11,7 @@ export default class Header extends React.Component {
     
   render() {
     return (
-      <div class="header">
+      <div className="header">
         <Logo />
         <SearchBar />
         <Links userLoggedIn={this.props.userLoggedIn} />

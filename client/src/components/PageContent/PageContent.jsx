@@ -10,7 +10,7 @@ export default class PageContent extends React.Component {
     
   render() {
     return (
-    <div class="pageContent">
+    <div className="pageContent">
       <TitleBar navigationList={this.props.navigationList}/>
       <MainContent />
     </div>
