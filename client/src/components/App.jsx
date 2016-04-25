@@ -7,19 +7,33 @@ import Footer from './Footer/Footer';
 const navList = [
                   {
                     name : "Home",
-                    isActive : true
+                    isActive : true,
+                    isDisabled : false
+                  },
+                  {
+                    name : "Playlists",
+                    isActive : false,
+                    isDisabled : true
                   },
                   {
                     name : "Subscriptions",
-                    isActive : false
+                    isActive : false,
+                    isDisabled : false
                   },
                   {
                     name : "History",
-                    isActive : false
+                    isActive : false,
+                    isDisabled : false
+                  },
+                  {
+                    name : "Discussions",
+                    isActive : false,
+                    isDisabled : true
                   },
                   {
                     name : "Settings",
-                    isActive : false
+                    isActive : false,
+                    isDisabled : true
                   }
                 ];
 

@@ -7,7 +7,7 @@ import Search from '../components/Search';
 
 export default (
   <Route path="/" component={App}>
-    <Route path="/Search" component={Search} />
+    <Route path="/Search" component={Search} /> 
     <IndexRoute component={Home}/>
   </Route>
 )
