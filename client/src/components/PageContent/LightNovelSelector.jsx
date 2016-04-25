@@ -7,9 +7,7 @@ export default class LightNovelSelector extends React.Component {
     
   render() {
     return (
-    <div>
-        <a href="#">LightNovel</a>
-    </div>
+        <a href="#" className="mdl-tabs__tab"  key="LightNovel">Light Novel</a>
     );
   }
 };

@@ -7,9 +7,7 @@ export default class AnimeSelector extends React.Component {
     
   render() {
     return (
-    <div>
-        <a href="#">Anime</a>
-    </div>
+        <a href="#" className="mdl-tabs__tab" key="Anime">Anime</a>
     );
   }
 };

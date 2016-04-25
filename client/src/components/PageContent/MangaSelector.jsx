@@ -7,9 +7,7 @@ export default class MangaSelector extends React.Component {
     
   render() {
     return (
-    <div>
-        <a href="#">Manga</a>
-    </div>
+        <a href="#" className="mdl-tabs__tab is-active" key="Manga">Manga</a>
     );
   }
 };

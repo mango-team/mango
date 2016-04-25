@@ -10,7 +10,7 @@ export default class TitleBar extends React.Component {
     
   render() {
     return (
-    <div>
+    <div className="docs-navigation__container">
         <NavigationTabs navigationList={this.props.navigationList}/>
         <MediaSelectors />
     </div>
