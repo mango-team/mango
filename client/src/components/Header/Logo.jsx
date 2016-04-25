@@ -1,13 +1,14 @@
 import React from 'react';
 
-export default class Logo extends React.Component {
-  render() {
-    return (
-      <div className="logo">
-        <a href="/">
-          <img src="http://placehold.it/35x35" />
-          <span>Mango</span>
-        </a>
-      </div>);
-  }
+const Logo = (props) => {
+  return (
+    <span className="mdl-layout-title">
+      <a href="/">
+        <img src="http://placehold.it/35x35" />
+        <span>Mango</span>
+      </a>
+    </span>
+  )
 };
+
+export default Logo;

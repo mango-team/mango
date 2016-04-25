@@ -1,9 +1,9 @@
 import React from 'react';
 
-export default class SignInLink extends React.Component {
-  render() {
-    return <span>
-            <a href="/SignIn">SignIn</a>
-           </span>;
-  }
+import HeaderLink from './HeaderLink';
+
+const SignInLink = () => {
+  return <HeaderLink href="/SignIn">SignIn</HeaderLink>;  
 };
+
+export default SignInLink;

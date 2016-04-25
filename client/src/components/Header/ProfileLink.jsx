@@ -1,9 +1,9 @@
 import React from 'react';
 
-export default class ProfileLink extends React.Component {
-  render() {
-    return <span>
-            <a href="/">ProfileLink</a>
-           </span>;
-  }
+import HeaderLink from './HeaderLink';
+
+const ProfileLink = (props) => {
+  return <HeaderLink href="/">Profile</HeaderLink>
 };
+
+export default ProfileLink;

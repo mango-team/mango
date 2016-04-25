@@ -1,9 +1,9 @@
 import React from 'react';
 
-export default class SignUpLink extends React.Component {
-  render() {
-    return <span>
-            <a href="/">SignUpLink</a>
-           </span>;
-  }
+import HeaderLink from './HeaderLink';
+
+const SignUpLink = (props) => {
+  return <HeaderLink href="/">Sign Up</HeaderLink>
 };
+
+export default SignUpLink;

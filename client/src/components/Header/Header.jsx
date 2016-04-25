@@ -4,18 +4,18 @@ import Logo from './Logo';
 import SearchBar from './SearchBar';
 import Links from './Links';
 
-export default class Header extends React.Component {
-  constructor(props) {
-        super(props);
-  }
-    
-  render() {
-    return (
-      <div className="header">
+const Header = ({userLoggedIn}) => {
+  return (
+    <header className="mdl-layout__header">
+      <div className="mdl-layout__header-row">
         <Logo />
         <SearchBar />
-        <Links userLoggedIn={this.props.userLoggedIn} />
+        <a className="mdl-navigation__link" href="/Browse">Browse</a>
+        <div className="mdl-layout-spacer"></div>
+        <Links userLoggedIn={userLoggedIn} />
       </div>
-    );
-  }
+    </header>
+  )
 };
+
+export default Header;

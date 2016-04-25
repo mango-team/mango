@@ -1,9 +1,9 @@
 import React from 'react';
 
-export default class Notifications extends React.Component {
-  render() {
-    return <span>
-            <a href="/"></a>
-           </span>;
-  }
-};
+import HeaderLink from './HeaderLink';
+
+const Notifications = () => {
+  return <HeaderLink href="/">Notifications</HeaderLink>
+}; 
+
+export default Notifications;

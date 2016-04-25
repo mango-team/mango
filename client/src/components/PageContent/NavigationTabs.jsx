@@ -5,20 +5,13 @@ export default class NavigationTabs extends React.Component {
         super(props);
   }
     
-  render() {   
-      var navigationList = this.props.navigationList; 
-    return (
-    <div>
-        <ul>
-        {
-           navigationList.map(function(element) {
-                return <li>
-                   <a href="#">{element}</a>
-                </li>
-            }, this)
-        }
-        </ul>
-    </div>
-    );
+  render() {
+      return (
+          <ul>
+          {this.props.navigationList.map(function(element){
+              return (<li key={element}>{element}</li>)
+          })}
+          </ul>
+      )
   }
 };
