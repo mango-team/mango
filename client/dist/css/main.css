@@ -8,48 +8,35 @@ Page content
 Footer
 */
 
-/* App */
-#app {
+
+/* Shared */
+.gallery {
     margin: auto;
-    width: 80%;
-    padding: 10px;
+    width: 85%;
 }
 
-/* Header */
-.header {
-    text-align: inline;
-    background-color : palevioletred;
+.galleryItem {
+    margin-left:10px;
+    margin-top:10px;
+    padding : 7px;
+    border: 2px black;
+    background-color: lightskyblue;
+    float:left;
 }
 
-.header .logo a:active{
-    color : black;
-    text-decoration: none;
+.tileHeader{    
+    position: relative;
+    height : 30px;
 }
 
-.header .logo a:hover{
-    color : black;    
-    text-decoration: none;
+.iconTileHeader { 
+    position: absolute;
+    top: 0px;
+    right: 5px;
 }
 
-.header .logo a:link{
-    color : black;    
-    text-decoration: none;
+.galleryItemContent  { 
+    float:left;
+    width: 300px;
+    display:block;
 }
-
-.header .logo a:visited{
-    color : black;
-    text-decoration: none;
-}
-
-/* Page content */
-
-.pageContent {
-    background-color : lightblue;
-}
-
-
-/* Footer */
-.footer {
-    background-color : lightgreen;
-}
-
