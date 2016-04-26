@@ -40,7 +40,7 @@ const navList = [
 const App = ({children}) => {
   return (
     <div className="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-      <Header userLoggedIn={true} />
+      <Header userLoggedIn={false} />
       <PageContent navigationList={navList} navigationActive="Home">{children}</PageContent>
       <Footer /> 
     </div>
