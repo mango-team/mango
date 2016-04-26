@@ -7,7 +7,8 @@ import Search from '../components/Search';
 
 export default (
   <Route path="/" component={App}>
-    <Route path="/Search" component={Search} /> 
     <IndexRoute component={Home}/>
+    <Route path="search" component={Search} /> 
+    <Route path="*" component={Home} /> { /* Catch all route. 404 later? */}
   </Route>
 )
