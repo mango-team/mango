@@ -10,7 +10,7 @@ const Header = ({userLoggedIn}) => {
       <div className="mdl-layout__header-row">
         <Logo />
         <SearchBar />
-        <a className="mdl-navigation__link" href="/Browse">Browse</a>
+        <a className="mdl-navigation__link" href="#/Browse">Browse</a>
         <div className="mdl-layout-spacer"></div>
         <Links userLoggedIn={userLoggedIn} />
       </div>
