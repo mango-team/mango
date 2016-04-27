@@ -1,6 +1,7 @@
 import React from 'react';
 
 import TileHeader from './TileHeader';
+import GalleryInfo from './GalleryInfo';
 
 const height = "300px";
 const width = "200px";
@@ -17,25 +18,7 @@ const GalleryItem = ({tile, isBare, tileType}) => {
                 width={width}
           />
         </a>
-        {isBare ? "" : <div className="galleryItemContent">
-                        
-                        <p>
-                            {tile.tags.map(function(element){                
-                                return (
-                                <strong key={element}>{element} {tile.tags[tile.tags.length - 1] == element ? "" : "-"} </strong>
-                                ) 
-                            })}
-                        </p>
-                        <p>
-                            Last update on the {tile.lastUpdate}
-                        </p>
-                        <p>
-                            {tile.views} views, {tile.chapterCount} chapters
-                        </p>
-                        <p>
-                            {tile.description}
-                        </p>
-                        </div>}   
+        {isBare ? "" : <GalleryInfo tile={tile} isBare={isBare}/>}
       </div>
   )
 };
