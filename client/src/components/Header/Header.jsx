@@ -3,6 +3,7 @@ import React from 'react';
 import Logo from './Logo';
 import SearchBar from './SearchBar';
 import Links from './Links';
+import { Link } from 'react-router'
 
 const Header = ({userLoggedIn}) => {
   return (
@@ -10,7 +11,7 @@ const Header = ({userLoggedIn}) => {
       <div className="mdl-layout__header-row">
         <Logo />
         <SearchBar />
-        <a className="mdl-navigation__link" href="#/Browse">Browse</a>
+        <Link className="mdl-navigation__link" to="/browse">Browse</Link>
         <div className="mdl-layout-spacer"></div>
         <Links userLoggedIn={userLoggedIn} />
       </div>

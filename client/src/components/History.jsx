@@ -13,7 +13,7 @@ const tags = ["action","aventure","shonen", "comedy"];
 const lastUpdate = "12/04/2016";
 const views = 48542;
 const chapterCount = 483;
-const detailPage = "/detail?id="; //javascript:void()
+const detailPage = "/Detail?id="; //javascript:void()
 const imageList = [
                     {
                       name : "One piece",
@@ -97,12 +97,12 @@ const imageList = [
                     }
                 ];
 
-const Home = (props) => {
+const History = (props) => {
   return (<div>
-          <h4>Welcome Home!</h4>
+          <h4>History</h4>
           <Gallery imageList={imageList} isBare={true} tileType={TILE_TYPE.Addable} />
         </div>
         )
   };
 
-export default Home;
+export default History;

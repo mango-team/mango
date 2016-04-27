@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Search = (props) => {
+const Discussions = (props) => {
   return <div>
-            <h4>Search</h4>
+            <h4>Discussions</h4>
             <h5>Comming soon !</h5>
         </div>
 };
 
-export default Search;
+export default Discussions;

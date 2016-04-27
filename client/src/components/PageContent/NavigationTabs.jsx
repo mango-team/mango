@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router'
 
 export default class NavigationTabs extends React.Component {
   constructor(props) {
@@ -6,15 +7,15 @@ export default class NavigationTabs extends React.Component {
   }  
   // Not working I don't know why :'(
   //style={element.isDisabled ? "pointer-events: none; cursor: default;" : ""}
-  render() {      
+  render() {    
       return (
           <div className="mdl-tabs__tab-bar">
             {this.props.navigationList.map(function(element){                
-                return (<a href={element.name} 
+                return (<Link to={element.name.toLowerCase()}
                  className={element.isActive ? "mdl-tabs__tab is-active" : "mdl-tabs__tab"} 
                  key={element.name}>
                  {element.name}
-                 </a>) 
+                 </Link>) 
             })}
           </div>
       )
