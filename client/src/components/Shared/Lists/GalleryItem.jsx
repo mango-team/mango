@@ -8,9 +8,10 @@ const height = "300px";
 const width = "200px";
 
 const GalleryItem = ({tile, isBare, tileType}) => {
+    var popupName = "Gallery";
     var openPopup = function (){
-        document.getElementById('popup').style.display='block';
-        document.getElementById('fade').style.display='block';
+        document.getElementById('popup' + popupName).style.display='block';
+        document.getElementById('fade' + popupName).style.display='block';
     };
     var detailPage = tile.detailPage + encodeURI(tile.name);
     var imageHref = isBare ? "javascript:void(0)" : detailPage;
@@ -27,7 +28,7 @@ const GalleryItem = ({tile, isBare, tileType}) => {
                     width={width}
             />
         </a>
-        {isBare ? <Popup>
+        {isBare ? <Popup name={popupName}>
                     <TileHeader title={tile.name} tileType={tileType} isBare={isBare}/>
                     <GalleryInfo tile={tile}/>
                     <a href={detailPage}>

@@ -9,6 +9,12 @@ Footer
 */
 
 
+/* Header */
+
+#SignUp {
+    margin-left : 20px;
+}
+
 /* Shared */
 .gallery {
     margin: auto;
@@ -73,8 +79,20 @@ Footer
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding : 0 7px 7px 7px;
+    padding : 0 0 7px 7px;
 }
+
+.popupHeader{    
+    position: relative;    
+    top: 0px;
+    right: 0px;
+}
+
+.popupContent  { 
+    float:left;
+    margin-top : 20px;
+}
+
 
 /* Change scrollbar for Chrome */
 

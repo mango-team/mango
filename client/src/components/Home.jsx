@@ -100,7 +100,7 @@ const imageList = [
 const Home = (props) => {
   return (<div>
           <h4>Welcome Home!</h4>
-          <Gallery imageList={imageList} isBare={true} tileType={TILE_TYPE.Deletable} />
+          <Gallery imageList={imageList} isBare={true} tileType={TILE_TYPE.Addable} />
         </div>
         )
   };
