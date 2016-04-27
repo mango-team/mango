@@ -13,10 +13,12 @@ const tags = ["action","aventure","shonen", "comedy"];
 const lastUpdate = "12/04/2016";
 const views = 48542;
 const chapterCount = 483;
+const detailPage = "/Detail?id="; //javascript:void()
 const imageList = [
                     {
                       name : "One piece",
                       src : src,
+                      detailPage : detailPage,
                       description : descr,
                       tags : tags,
                       lastUpdate : lastUpdate,
@@ -26,6 +28,7 @@ const imageList = [
                     {
                       name : "Naruto",
                       src : src,
+                      detailPage : detailPage,
                       description : descr,
                       tags : tags,
                       lastUpdate : lastUpdate,
@@ -35,6 +38,7 @@ const imageList = [
                     {
                       name : "Bleach",
                       src : src,
+                      detailPage : detailPage,
                       description : descr,
                       tags : tags,
                       lastUpdate : lastUpdate,
@@ -44,6 +48,7 @@ const imageList = [
                     {
                       name : "Hunter X Hunter",
                       src : src,
+                      detailPage : detailPage,
                       description : descr,
                       tags : tags,
                       lastUpdate : lastUpdate,
@@ -53,6 +58,7 @@ const imageList = [
                     {
                       name : "Noblesse",
                       src : src,
+                      detailPage : detailPage,
                       description : descr,
                       tags : tags,
                       lastUpdate : lastUpdate,
@@ -62,6 +68,7 @@ const imageList = [
                     {
                       name : "The Gamer",
                       src : src,
+                      detailPage : detailPage,
                       description : descr,
                       tags : tags,
                       lastUpdate : lastUpdate,
@@ -71,6 +78,7 @@ const imageList = [
                     {
                       name : "Ares",
                       src : src,
+                      detailPage : detailPage,
                       description : descr,
                       tags : tags,
                       lastUpdate : lastUpdate,
@@ -80,6 +88,7 @@ const imageList = [
                     {
                       name : "Hajime no Ippo",
                       src : src,
+                      detailPage : detailPage,
                       description : descr,
                       tags : tags,
                       lastUpdate : lastUpdate,
