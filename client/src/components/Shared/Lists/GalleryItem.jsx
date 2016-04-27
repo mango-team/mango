@@ -18,7 +18,7 @@ const GalleryItem = ({tile, isBare, tileType}) => {
                 width={width}
           />
         </a>
-        {isBare ? "" : <GalleryInfo tile={tile} isBare={isBare}/>}
+        {isBare ? "" : <GalleryInfo tile={tile}/>}
       </div>
   )
 };
