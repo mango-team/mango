@@ -18,15 +18,20 @@ Footer
 .galleryItem {
     margin-left:10px;
     margin-top:10px;
-    padding : 7px;
-    border: 2px black;
+    padding : 0 7px 7px 7px;
+    border: 2px solid  dimgrey;
+    float:left;    
     background-color: lightskyblue;
-    float:left;
+}
+
+.galleryItem .tileImg{
+    border: 2px solid  dimgrey;
 }
 
 .tileHeader{    
     position: relative;
-    height : 30px;
+    height : 30px;  
+    margin-top : -20px;  
 }
 
 .iconTileHeader { 
@@ -39,4 +44,7 @@ Footer
     float:left;
     width: 300px;
     display:block;
+    height : 304px;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }

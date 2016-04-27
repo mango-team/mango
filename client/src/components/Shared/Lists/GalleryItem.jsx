@@ -10,15 +10,32 @@ const GalleryItem = ({tile, isBare, tileType}) => {
       <div className="galleryItem">        
           <TileHeader title={tile.name} tileType={tileType}/>
           <a href="#">
-          <img  src={tile.src}
+          <img  className="tileImg"
+                src={tile.src}
                 alt={tile.name}
                 height={height}
                 width={width}
           />
         </a>
-        {isBare ? "" : <p className="galleryItemContent">
-          {tile.description}
-        </p>}   
+        {isBare ? "" : <div className="galleryItemContent">
+                        
+                        <p>
+                            {tile.tags.map(function(element){                
+                                return (
+                                <strong key={element}>{element} {tile.tags[tile.tags.length - 1] == element ? "" : "-"} </strong>
+                                ) 
+                            })}
+                        </p>
+                        <p>
+                            Last update on the {tile.lastUpdate}
+                        </p>
+                        <p>
+                            {tile.views} views, {tile.chapterCount} chapters
+                        </p>
+                        <p>
+                            {tile.description}
+                        </p>
+                        </div>}   
       </div>
   )
 };
