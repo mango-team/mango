@@ -10,7 +10,7 @@ const TileHeader = ({title, tileType, isBare}) => {
   return (
       <div className="tileHeader">
         <h5 iconTileHeader>{title}</h5>
-        {isBare ? "" : <span className="iconTileHeader"><a href="#" >{tileType == "Deletable" ? deletable : addable }</a></span>}
+        {isBare ? "" : <a href="#" className="iconTileHeader">{tileType == "Deletable" ? deletable : addable }</a>}
       </div>
   )
 };
