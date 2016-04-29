@@ -8,14 +8,27 @@ import { Link } from 'react-router'
 const height = "300px";
 const width = "200px";
 
-const GalleryItem = ({tile, isBare, tileType}) => {
+class GalleryItem extends React.Component { 
+  constructor(props) {
+    super(props);  
+  }
+        
+  render() {
+    var {
+          tile, 
+          isBare, 
+          tileType,
+          route
+    } = this.props;
     var popupName = "Gallery";
-    var openPopup = function (){
+    var openPopup = function (e){
+        e.preventDefault();
         document.getElementById('popup' + popupName).style.display='block';
         document.getElementById('fade' + popupName).style.display='block';
     };
-    var detailPage = tile.detailPage + encodeURIComponent(tile.name);
-    var imageHref = isBare ? "javascript:void(0)" : detailPage;
+    
+    var detailPage = tile.detailPage + encodeURIComponent(tile.name); 
+    var imageHref = isBare ? "" : detailPage;
     var imageOnClick = isBare ? openPopup : "";
     
   return (
@@ -43,6 +56,7 @@ const GalleryItem = ({tile, isBare, tileType}) => {
                 </Popup> : <GalleryInfo tile={tile}/>}
       </div>
   )
+  }
 };
 
 export default GalleryItem;

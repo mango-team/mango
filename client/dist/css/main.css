@@ -23,7 +23,7 @@ Footer
 
 .galleryItem {
     margin-left:10px;
-    margin-top:10px;
+    margin-bottom:10px;
     padding : 0 7px 7px 7px;
     border: 2px solid  dimgrey;
     float:left;    
@@ -43,7 +43,8 @@ Footer
 .iconTileHeader { 
     position: absolute;
     top: 0px;
-    right: 5px;
+    right: 5px;    
+    z-index: 1000;
 }
 
 .galleryItemContent  { 
@@ -85,7 +86,8 @@ Footer
 .popupCloseBtn{ 
     position: absolute; 
     top: 0px;
-    right: 7px;
+    right: 7px;    
+    z-index: 2000;
     
 }
 
@@ -93,7 +95,6 @@ Footer
     position: relative;
     height : 30px;  
     color : black; 
-    z-index: -1;
 }
 
 .popupContent  { 
