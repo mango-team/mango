@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router'
 
 const Detail = (props) => {
-  return <div>
+  return <div className="pageContent">
             <h4>Detail</h4>
             <h5>Comming soon !</h5>            
             <Link to="/reader">Chapitre 1</Link>

@@ -15,10 +15,16 @@ Footer
     margin-left : 20px;
 }
 
+/* Page Content */
+.pageContent{
+    margin: auto;
+    width: 85%;
+}
+
 /* Shared */
 .gallery {
     margin: auto;
-    width: 85%;
+    width: 90%;
 }
 
 .galleryItem {
@@ -54,6 +60,21 @@ Footer
     height : 304px;
     overflow-y: scroll;
     overflow-x: hidden;
+}
+
+.slider{
+    float:left;
+    margin-left:10px;
+    margin-bottom:10px;
+}
+
+.allSliders{
+    margin: auto;
+}
+
+.sliderNav{
+    float:left;
+    margin-top: 120px;  
 }
 
 .blackOverlay{

@@ -3,7 +3,7 @@ import React from 'react';
 import Gallery from './Shared/Lists/Gallery';
 
 const Search = (props, context) => {
-  return (<div>
+  return (<div className="pageContent">
           <h4>Search</h4>
           <p>32 results in 0.31 seconds</p>
           

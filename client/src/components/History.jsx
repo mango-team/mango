@@ -3,7 +3,7 @@ import React from 'react';
 import Gallery from './Shared/Lists/Gallery';
 
 const History = (props, context) => {  
-  return (<div>
+  return (<div className="pageContent">
           <h4>History</h4>
           <input type="submit" defaultValue="Clear history" title="Delete all your current history" onClick={""} />
           <input type="submit" defaultValue="Pause history" title="Stop tracking your browsing" onClick={""} />
