@@ -21,10 +21,43 @@ Footer
     width: 85%;
 }
 
+.listFilters{    
+    margin: auto;
+    /* Same width than .gallery */
+    width: 1160px;  /* 1596px for 3 detailed by row; 1160px for 5 bare by row */
+}
+
+.listFilters table{
+    margin-left:10px;
+    height : 50px;
+    width: 100%;
+} 
+
+.listFilters table td{
+    width: 33%;
+}
+
+.listButtons:nth-child(1){
+    margin-right: 100px;
+} 
+
+.listFilters table td:nth-child(2) > :nth-child(1) > :nth-child(1){
+    margin-right: 10px;
+}
+
+.listFilters table td:nth-child(3) > :nth-child(1){
+    float: right;
+}
+
+.listFilters table td:nth-child(3) > :nth-child(1) > :nth-child(2){
+    margin-bottom: -9px;
+}
+
 /* Shared */
 .gallery {
     margin: auto;
-    width: 90%;
+    /* Same width than .listFilters */
+    width: 1160px;  /* 1596px for 3 detailed by row; 1160px for 5 bare by row */
 }
 
 .galleryItem {
@@ -120,6 +153,28 @@ Footer
 
 .popupContent  { 
     float:left;
+}
+
+.viewSwitcher:hover{
+    height: 30px;
+    width: 30px;
+    opacity: 1;
+}
+
+.gridSwitcher .viewSwitcherSelected{
+   opacity: 1.0;
+}
+
+.gridSwitcher {
+   opacity: 0.5;
+}
+
+.listSwitcher {
+   opacity: 0.5;
+}
+
+.viewSwitcherSelected{
+   opacity: 1;
 }
 
 

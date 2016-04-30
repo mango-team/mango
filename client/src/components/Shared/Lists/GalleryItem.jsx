@@ -40,6 +40,7 @@ class GalleryItem extends React.Component {
                     alt={tile.name}
                     height={height}
                     width={width}
+                    title={tile.name}
             />
         </Link>
         {isBare ? <Popup name={popupName}>
@@ -51,6 +52,7 @@ class GalleryItem extends React.Component {
                                 alt={tile.name}
                                 height={height}
                                 width={width}
+                                title={tile.name}
                         />
                     </Link>
                 </Popup> : <GalleryInfo tile={tile}/>}

@@ -51,17 +51,7 @@ const chapterCount = 483;
 const detailPage = "/detail?id="; //javascript:void()
 const imageList = [
                     {
-                      name : "One piece",
-                      src : src,
-                      detailPage : detailPage,
-                      description : descr,
-                      tags : tags,
-                      lastUpdate : lastUpdate,
-                      views : views,
-                      chapterCount : chapterCount
-                    },
-                    {
-                      name : "Naruto",
+                      name : "Ares",
                       src : src,
                       detailPage : detailPage,
                       description : descr,
@@ -81,7 +71,27 @@ const imageList = [
                       chapterCount : chapterCount
                     },
                     {
+                      name : "Hajime no Ippo",
+                      src : src,
+                      detailPage : detailPage,
+                      description : descr,
+                      tags : tags,
+                      lastUpdate : lastUpdate,
+                      views : views,
+                      chapterCount : chapterCount
+                    },
+                    {
                       name : "Hunter X Hunter",
+                      src : src,
+                      detailPage : detailPage,
+                      description : descr,
+                      tags : tags,
+                      lastUpdate : lastUpdate,
+                      views : views,
+                      chapterCount : chapterCount
+                    },
+                    {
+                      name : "Naruto",
                       src : src,
                       detailPage : detailPage,
                       description : descr,
@@ -101,27 +111,17 @@ const imageList = [
                       chapterCount : chapterCount
                     },
                     {
+                      name : "One piece",
+                      src : src,
+                      detailPage : detailPage,
+                      description : descr,
+                      tags : tags,
+                      lastUpdate : lastUpdate,
+                      views : views,
+                      chapterCount : chapterCount
+                    },
+                    {
                       name : "The Gamer",
-                      src : src,
-                      detailPage : detailPage,
-                      description : descr,
-                      tags : tags,
-                      lastUpdate : lastUpdate,
-                      views : views,
-                      chapterCount : chapterCount
-                    },
-                    {
-                      name : "Ares",
-                      src : src,
-                      detailPage : detailPage,
-                      description : descr,
-                      tags : tags,
-                      lastUpdate : lastUpdate,
-                      views : views,
-                      chapterCount : chapterCount
-                    },
-                    {
-                      name : "Hajime no Ippo",
                       src : src,
                       detailPage : detailPage,
                       description : descr,
