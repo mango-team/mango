@@ -129,6 +129,106 @@ const imageList = [
                       lastUpdate : lastUpdate,
                       views : views,
                       chapterCount : chapterCount
+                    },
+                    {
+                      name : "To LOVE-RU",
+                      src : src,
+                      detailPage : detailPage,
+                      description : descr,
+                      tags : tags,
+                      lastUpdate : lastUpdate,
+                      views : views,
+                      chapterCount : chapterCount
+                    },
+                    {
+                      name : "To LOVE-RU Darkness",
+                      src : src,
+                      detailPage : detailPage,
+                      description : descr,
+                      tags : tags,
+                      lastUpdate : lastUpdate,
+                      views : views,
+                      chapterCount : chapterCount
+                    },
+                    {
+                      name : "Tokyo Ghoul",
+                      src : src,
+                      detailPage : detailPage,
+                      description : descr,
+                      tags : tags,
+                      lastUpdate : lastUpdate,
+                      views : views,
+                      chapterCount : chapterCount
+                    },
+                    {
+                      name : "Tokyo Ghoul : Re",
+                      src : src,
+                      detailPage : detailPage,
+                      description : descr,
+                      tags : tags,
+                      lastUpdate : lastUpdate,
+                      views : views,
+                      chapterCount : chapterCount
+                    },
+                    {
+                      name : "Toriko",
+                      src : src,
+                      detailPage : detailPage,
+                      description : descr,
+                      tags : tags,
+                      lastUpdate : lastUpdate,
+                      views : views,
+                      chapterCount : chapterCount
+                    },
+                    {
+                      name : "Tower of god",
+                      src : src,
+                      detailPage : detailPage,
+                      description : descr,
+                      tags : tags,
+                      lastUpdate : lastUpdate,
+                      views : views,
+                      chapterCount : chapterCount
+                    },
+                    {
+                      name : "Tsugumomo",
+                      src : src,
+                      detailPage : detailPage,
+                      description : descr,
+                      tags : tags,
+                      lastUpdate : lastUpdate,
+                      views : views,
+                      chapterCount : chapterCount
+                    },
+                    {
+                      name : "Vinland Sage",
+                      src : src,
+                      detailPage : detailPage,
+                      description : descr,
+                      tags : tags,
+                      lastUpdate : lastUpdate,
+                      views : views,
+                      chapterCount : chapterCount
+                    },
+                    {
+                      name : "Void",
+                      src : src,
+                      detailPage : detailPage,
+                      description : descr,
+                      tags : tags,
+                      lastUpdate : lastUpdate,
+                      views : views,
+                      chapterCount : chapterCount
+                    },
+                    {
+                      name : "Zetman",
+                      src : src,
+                      detailPage : detailPage,
+                      description : descr,
+                      tags : tags,
+                      lastUpdate : lastUpdate,
+                      views : views,
+                      chapterCount : chapterCount
                     }
                 ];
 

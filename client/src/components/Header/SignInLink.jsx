@@ -7,10 +7,10 @@ import Popup from '../Shared/Popup';
 const SignInLink = (props) => {   
   var popupName = "SignIn";
   var popupTitle = "Sign In"; 
-    var openPopup = true ? function (){
+    var openPopup = function (){
         document.getElementById('popupSignIn').style.display='block';
         document.getElementById('fadeSignIn').style.display='block';
-    } : "";
+    };
   return <div id="SignIn">
           <a href="javascript:void(0)" onClick={openPopup}>  
             {popupTitle}          

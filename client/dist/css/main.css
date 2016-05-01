@@ -86,6 +86,14 @@ Footer
     z-index: 1000;
 }
 
+.titleTileHeader{
+    width: 180px;
+    height: 25px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 .galleryItemContent  { 
     float:left;
     width: 300px;
@@ -98,16 +106,17 @@ Footer
 .slider{
     float:left;
     margin-left:10px;
-    margin-bottom:10px;
+    margin-bottom:10px;    
+    width: 100%;
 }
 
 .allSliders{
-    margin: auto;
+    margin: auto;    
 }
 
 .sliderNav{
     float:left;
-    margin-top: 120px;  
+    margin-top: 135px;  
 }
 
 .blackOverlay{
