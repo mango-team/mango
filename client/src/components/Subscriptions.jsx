@@ -3,14 +3,32 @@ import React from 'react';
 import Gallery from './Shared/Lists/Gallery';
 import ListFilters from './Shared/Lists/ListFilters';
 
-const Subscriptions = (props, context) => {  
-  return (<div className="pageContent">
-          <h4>Subscriptions</h4>          
-          <ListFilters title="subscriptions"/>
-          <Gallery imageList={context.imageList} isBare={true} tileType={context.tileType.Deletable} />
-        </div>
-        )
+class Subscriptions extends React.Component {
+  constructor(props, context) {
+    super(props, context);
+    this.state = {
+      isBareView: false
+    }
+  }
+  
+  onViewChanged(newView) {
+    this.setState({isBareView: newView == 'list'});
+  }
+  
+  render() {  
+    const  options = {
+      viewSwitcherOptions: { 
+        initialView: "list", 
+        onViewChanged: (newView) => this.onViewChanged(newView) }
+    };
+    return (<div className="pageContent">
+            <h4>Subscriptions</h4>          
+            <ListFilters title="subscriptions" {...options}/>
+            <Gallery imageList={this.context.imageList} isBare={this.state.isBareView} tileType={this.context.tileType.Deletable} />
+          </div>
+          )
   };
+}
   
   Subscriptions.contextTypes = {
    imageList: React.PropTypes.array,
