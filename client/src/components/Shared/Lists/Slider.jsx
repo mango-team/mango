@@ -4,83 +4,69 @@ import GridItem from './GridItem';
 import { Link } from 'react-router'
 import ReactDOM from 'react-dom';
 
-const Slider = ({imageList, isBare, tileType, itemLimit, name, title, linkTo}) => { 
-    var slider = [];
-    var sliderNavSize = "65px";
-    var currentImage = 0;
-    var sliderContentId = "sliderContent"+ name;
-    var maxTiles = 15;
-    
-   for(currentImage; currentImage < itemLimit; currentImage++)
-   {
-       var element = imageList[currentImage];
-       slider.push(<GridItem tile={element} isBare={isBare} tileType={tileType} key={element.name}/>);
-   }
-   var navNext;
-   var navPrevious;
-// Attempt at sliding 
-//     var navNext = function () { 
-//     var higherLimit =  currentImage*1 + itemLimit*1;
-//     if(higherLimit <= maxTiles)
-//     {   
-//         slider = [];
-//         for(currentImage; currentImage < higherLimit && currentImage < imageList.length; currentImage++)
-//         {  
-//             var element = imageList[currentImage];            
-//             slider.push(<GridItem tile={element} isBare={isBare} tileType={tileType} key={element.name}/>);
-//             console.log("next slider : " + slider + " currentImage : " + currentImage);
-//         }
-        
-//         var oldSliderContendId = document.getElementById(sliderContentId);
-//         var newSliderContendId = 
-//             <div>       
-//                 {slider}
-//             </div>;
-//         console.log("next newSlider : " + newSliderContendId);
-//         //oldSliderContendId.parentNode.replaceChild(newSliderContendId, oldSliderContendId);
-//         ReactDOM.render(newSliderContendId, oldSliderContendId);
-//     }
-//     else
-//     {
-//        console.log("higherLimit > maxLimit : " + higherLimit);
-//     }
-//    }; 
-   
-//    var navPrevious = function () {  
-//      currentImage = imageList.length - 1;
-//      var lowerLimit = currentImage*1 - itemLimit*1;
+class Slider extends React.Component {
+     constructor(props) {
+         super(props);         
+         this.diplayedTiles = 5;
+         this.maxTiles = 15;
+         this.state = { 
+             range: [0,this.diplayedTiles], 
+             imageList : this.props.imageList
+         };
+         this.navNext.bind(this);
+         this.navPrevious.bind(this);
+     }
      
-//      if(lowerLimit > 0)
-//      {
-//          console.log("prev lowerLimit : " + lowerLimit + " currentImage : " + currentImage);
-//         for(currentImage; currentImage <= lowerLimit && currentImage <= 0; currentImage--)
-//         {
-//             var element = imageList[currentImage];            
-//             console.log("prev slider : " + slider + " currentImage : " + currentImage);
-//             ReactDOM.renderComponent(<GridItem tile={element} isBare={isBare} tileType={tileType} key={element.name}/>, document.getElementById(sliderContentId));
-//         }
-//     }
-//     else
-//     {
-//        console.log("lowerLimit <= 0");
-//     }
-//    };  
-  
+     navNext () { 
+        var lowerRange = this.state.range[0]*1;
+        lowerRange += this.diplayedTiles*1;
+        var higherRange = this.state.range[1]*1;
+        higherRange += this.diplayedTiles*1;
+        if(higherRange <= this.maxTiles)
+        {
+            this.setState({range : [lowerRange, higherRange]});
+        }
+     }; 
+   
+     navPrevious() {  
+         var lowerRange = this.state.range[0]*1;
+        lowerRange -= this.diplayedTiles*1;
+        var higherRange = this.state.range[1]*1;
+        higherRange -= this.diplayedTiles*1;
+        if(lowerRange => 0)
+        {   
+            this.setState({range : [lowerRange, higherRange]});
+        }
+     };  
+      
+     render() {
+        var {isBare, tileType, name, title, linkTo} = this.props;
+        var slider = [];
+        var currentImage = 0;
+        var sliderContentId = "sliderContent"+ name;
+        
+        for(currentImage = this.state.range[0]; currentImage < this.state.range[1] && currentImage < this.state.imageList.length ; currentImage++)
+        {
+            var element = this.state.imageList[currentImage];
+            slider.push(<GridItem tile={element} isBare={isBare} tileType={tileType} key={element.name}/>);
+        }   
+        
   return (
       <div className="slider" id={"slider"+ name}>
         <h5><Link to={linkTo}>{title}</Link></h5>
         <br/>
-        <a className="sliderNav" href="javascript:void(0)" onClick={navPrevious}>
-            <img alt="previous" width={sliderNavSize} height={sliderNavSize} src="https://cdn0.iconfinder.com/data/icons/slim-square-icons-basics/100/basics-05-128.png"/>
-        </a>
+        {this.state.range[0] <= 0 ? <span className="sliderNav"></span> :<a href="javascript:void(0)" onClick={() => this.navPrevious()}>
+            <img alt="previous" className="sliderNav" src="https://cdn0.iconfinder.com/data/icons/slim-square-icons-basics/100/basics-05-128.png"/>
+        </a>}
         <div id={sliderContentId}>       
             {slider}
         </div>
-        <a className="sliderNav" href="javascript:void(0)" onClick={navNext}>
-            <img alt="next" width={sliderNavSize} height={sliderNavSize} src="https://cdn0.iconfinder.com/data/icons/slim-square-icons-basics/100/basics-06-128.png"/>
-        </a>
+        {this.state.range[1] >= this.maxTiles ? <span className="sliderNav"></span> : <a href="javascript:void(0)" onClick={() => this.navNext()}>
+            <img alt="next" className="sliderNav" src="https://cdn0.iconfinder.com/data/icons/slim-square-icons-basics/100/basics-06-128.png"/>
+        </a>}
       </div>
   )
+     }
 };
 
 export default Slider;

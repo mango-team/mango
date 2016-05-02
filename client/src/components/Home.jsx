@@ -10,8 +10,7 @@ const Home = (props, context) => {
             <Slider 
               imageList={context.imageList} 
               isBare={true} 
-              tileType={context.tileType.Addable}  
-              itemLimit="5" 
+              tileType={context.tileType.Addable} 
               name="RecentUpdates" 
               title="Recent updates" 
               linkTo="/Updates"
@@ -19,8 +18,7 @@ const Home = (props, context) => {
             <Slider 
               imageList={context.imageList} 
               isBare={true} 
-              tileType={context.tileType.Addable}  
-              itemLimit="5" 
+              tileType={context.tileType.Addable} 
               name="ContinueReading" 
               title="Continue reading" 
               linkTo="/Continue"
@@ -28,8 +26,7 @@ const Home = (props, context) => {
               <Slider 
               imageList={context.imageList} 
               isBare={true} 
-              tileType={context.tileType.Addable}  
-              itemLimit="5" 
+              tileType={context.tileType.Addable}
               name="PersonnalSuggestion" 
               title="Our personnal suggestions to you" 
               linkTo="/Suggestions"
@@ -37,8 +34,7 @@ const Home = (props, context) => {
               <Slider 
               imageList={context.imageList} 
               isBare={true} 
-              tileType={context.tileType.Addable}  
-              itemLimit="5" 
+              tileType={context.tileType.Addable} 
               name="RecommendedByFriends" 
               title="Recomented by your friends" 
               linkTo="/Recommended"

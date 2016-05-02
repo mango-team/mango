@@ -146,6 +146,8 @@ Footer
 .sliderNav{
     float:left;
     margin-top: 135px;  
+    width : 65px;
+    height : 65px;
 }
 
 .blackOverlay{
