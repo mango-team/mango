@@ -20,7 +20,7 @@ class GalleryItem extends React.Component {
           tileType,
           route
     } = this.props;
-    var popupName = "Gallery";
+    var popupName = tile.name;
     var openPopup = function (e){
         e.preventDefault();
         document.getElementById('popup' + popupName).style.display='block';

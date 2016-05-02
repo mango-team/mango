@@ -87,7 +87,7 @@ Footer
 }
 
 .titleTileHeader{
-    width: 180px;
+    width: calc(100% - 25px);
     height: 25px;
     white-space: nowrap;
     overflow: hidden;
@@ -135,8 +135,8 @@ Footer
 
 .popup {
     border: 2px solid  dimgrey;
-	display: none;
-	position: absolute;
+    display : none;
+	position: fixed;
 	background-color: white;
 	z-index:1002;
 	overflow: auto;
@@ -150,8 +150,7 @@ Footer
     position: absolute; 
     top: 0px;
     right: 7px;    
-    z-index: 2000;
-    
+    z-index: 2000;    
 }
 
 .popupTitle{   
