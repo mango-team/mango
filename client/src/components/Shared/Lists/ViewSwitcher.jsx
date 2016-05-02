@@ -4,7 +4,7 @@ class ViewSwitcher extends React.Component {
      constructor(props) {
          super(props);
          this.state = { 
-             view: this.props.initialView || 'list'
+             view: this.props.initialView || 'grid'
          };
          this.toogleView.bind(this);
      }
@@ -28,7 +28,7 @@ class ViewSwitcher extends React.Component {
         return (
             <center>
                 <a href="javascript:void(0)" onClick={() => this.toogleView()}>
-                    <img className={gridSwitcherClassName} alt ="Gallery" src="https://image.freepik.com/free-icon/3x3-grid_318-26619.jpg" height="20px" width="20px"/>
+                    <img className={gridSwitcherClassName} alt ="Grid" src="https://image.freepik.com/free-icon/3x3-grid_318-26619.jpg" height="20px" width="20px"/>
                 </a>
                 <a href="javascript:void(0)" onClick={() => this.toogleView()}>
                     <img alt ="List" className={listSwitcherClassName} src="https://cdn2.iconfinder.com/data/icons/flat-ui-icons-24-px/24/menu-24-512.png" height="20px" width="20px"/>

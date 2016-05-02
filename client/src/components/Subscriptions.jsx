@@ -7,24 +7,32 @@ class Subscriptions extends React.Component {
   constructor(props, context) {
     super(props, context);
     this.state = {
-      isBareView: false
+      isBareView: true,
+      isListView: false
     }
   }
   
   onViewChanged(newView) {
-    this.setState({isBareView: newView == 'list'});
-  }
+    this.setState({isListView: newView == 'list'});
+  };
+  
+  onInfoChanged(newInfo) {
+    this.setState({isBareView: newInfo == 'bare'});
+  };
   
   render() {  
     const  options = {
-      viewSwitcherOptions: { 
-        initialView: "list", 
-        onViewChanged: (newView) => this.onViewChanged(newView) }
+      viewSwitcherOptions: {
+        initialView: "grid",
+        initialInfo: "detailed", 
+        onViewChanged: (newView) => this.onViewChanged(newView),
+        onInfoChanged: (newInfo) => this.onInfoChanged(newInfo) }
     };
-    return (<div className="pageContent">
+    return (
+          <div className="pageContent">
             <h4>Subscriptions</h4>          
             <ListFilters title="subscriptions" {...options}/>
-            <Gallery imageList={this.context.imageList} isBare={this.state.isBareView} tileType={this.context.tileType.Deletable} />
+            <Gallery imageList={this.context.imageList} isBare={this.state.isBareView} tileType={this.context.tileType.Deletable} isList={this.state.isListView} />
           </div>
           )
   };

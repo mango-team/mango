@@ -1,6 +1,7 @@
 import React from 'react';
 
 import ViewSwitcher from './ViewSwitcher';
+import InfoSwitcher from './InfoSwitcher';
 
 const ListFilters = ({title = "", isAdvanced = false, viewSwitcherOptions}) => {
  var searchPlaceHolder = "Search " + title;
@@ -9,10 +10,7 @@ const ListFilters = ({title = "", isAdvanced = false, viewSwitcherOptions}) => {
                         <input type="image" width="30px" height="30px" onClick="" src="https://cdn2.iconfinder.com/data/icons/media-and-navigation-buttons-square/512/Button_15-512.png" alt="Search" title="Search"/>
                     </div>;
  var viewSwitcher = <ViewSwitcher {...viewSwitcherOptions} />;
- var detailSwitcher = <center>
-                        <a href="#">Detailed</a>
-                        <a href="#">Bare</a>
-                      </center>;
+ var detailSwitcher = <InfoSwitcher {...viewSwitcherOptions}/>;
   return (
           <div className="listFilters">
             <table>

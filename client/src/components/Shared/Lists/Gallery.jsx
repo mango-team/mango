@@ -6,21 +6,15 @@ import ListItem from './ListItem';
 class Gallery extends React.Component {     
   constructor(props) {
     super(props);  
-    this.state = {
-    isList: this.props.isList,
-    };           
   } 
   
   render () {   
     var {
           imageList,
           isBare,
-          tileType
+          tileType,
+          isList
     } = this.props;
-    
-    var {
-        isList
-    } = this.state
     
     return (
         <div className="gallery">
