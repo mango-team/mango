@@ -12,7 +12,7 @@ const History = (props, context) => {
           <input type="submit" defaultValue="Pause history" title="Stop tracking your browsing" onClick={""} />
           </center>
           <ListFilters title="history"/>
-          <Gallery imageList={context.imageList} isBare={true} tileType={context.tileType.Deletable} />
+          <Gallery imageList={context.imageList} isBare={true} tileType={context.tileType.Deletable} isList="false"/>
         </div>
         )
   };

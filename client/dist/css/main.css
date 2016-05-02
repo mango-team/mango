@@ -88,6 +88,7 @@ Footer
 
 .titleTileHeader{
     width: calc(100% - 25px);
+    margin-right : -25px;
     height: 25px;
     white-space: nowrap;
     overflow: hidden;
@@ -101,6 +102,34 @@ Footer
     height : 304px;
     overflow-y: scroll;
     overflow-x: hidden;
+}
+.listItem{    
+    margin-left: 10px;    
+    margin-bottom: 7px;
+    border: 2px solid  dimgrey;    
+    height : 150px;
+}
+.listItem div{ 
+    float:left;
+    height : 150px;
+}
+.listItem div p {
+    line-height: 100%;
+}
+.listItemContentImg {     
+    width: 100px;
+    border-right: 2px solid  dimgrey;
+    margin-right: 10px;
+}
+.listItemContentSideInfo { 
+    margin-top : 10px;
+    width : 250px;    
+    margin-right : 10px;
+}
+.listItemContentDescription {
+    margin-top : 10px; 
+    width : 770px;
+    overflow: hidden;
 }
 
 .slider{

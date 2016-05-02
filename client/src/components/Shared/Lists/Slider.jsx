@@ -1,6 +1,6 @@
 import React from 'react';
 
-import GalleryItem from './GalleryItem';
+import GridItem from './GridItem';
 import { Link } from 'react-router'
 import ReactDOM from 'react-dom';
 
@@ -14,7 +14,7 @@ const Slider = ({imageList, isBare, tileType, itemLimit, name, title, linkTo}) =
    for(currentImage; currentImage < itemLimit; currentImage++)
    {
        var element = imageList[currentImage];
-       slider.push(<GalleryItem tile={element} isBare={isBare} tileType={tileType} key={element.name}/>);
+       slider.push(<GridItem tile={element} isBare={isBare} tileType={tileType} key={element.name}/>);
    }
    var navNext;
    var navPrevious;
@@ -27,7 +27,7 @@ const Slider = ({imageList, isBare, tileType, itemLimit, name, title, linkTo}) =
 //         for(currentImage; currentImage < higherLimit && currentImage < imageList.length; currentImage++)
 //         {  
 //             var element = imageList[currentImage];            
-//             slider.push(<GalleryItem tile={element} isBare={isBare} tileType={tileType} key={element.name}/>);
+//             slider.push(<GridItem tile={element} isBare={isBare} tileType={tileType} key={element.name}/>);
 //             console.log("next slider : " + slider + " currentImage : " + currentImage);
 //         }
         
@@ -57,7 +57,7 @@ const Slider = ({imageList, isBare, tileType, itemLimit, name, title, linkTo}) =
 //         {
 //             var element = imageList[currentImage];            
 //             console.log("prev slider : " + slider + " currentImage : " + currentImage);
-//             ReactDOM.renderComponent(<GalleryItem tile={element} isBare={isBare} tileType={tileType} key={element.name}/>, document.getElementById(sliderContentId));
+//             ReactDOM.renderComponent(<GridItem tile={element} isBare={isBare} tileType={tileType} key={element.name}/>, document.getElementById(sliderContentId));
 //         }
 //     }
 //     else

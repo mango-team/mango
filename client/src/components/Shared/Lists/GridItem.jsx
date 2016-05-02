@@ -1,14 +1,14 @@
 import React from 'react';
 
 import TileHeader from './TileHeader';
-import GalleryInfo from './GalleryInfo';
+import GridInfo from './GridInfo';
 import Popup from '../Popup';
 import { Link } from 'react-router'
 
 const height = "300px";
 const width = "200px";
 
-class GalleryItem extends React.Component { 
+class GridItem extends React.Component { 
   constructor(props) {
     super(props);  
   }
@@ -45,7 +45,7 @@ class GalleryItem extends React.Component {
         </Link>
         {isBare ? <Popup name={popupName}>
                     <TileHeader title={tile.name} tileType={tileType} isBare={isBare}/>
-                    <GalleryInfo tile={tile}/>
+                    <GridInfo tile={tile}/>
                     <Link to={detailPage}>
                         <img  className="tileImg"
                                 src={tile.src}
@@ -55,10 +55,10 @@ class GalleryItem extends React.Component {
                                 title={tile.name}
                         />
                     </Link>
-                </Popup> : <GalleryInfo tile={tile}/>}
+                </Popup> : <GridInfo tile={tile}/>}
       </div>
   )
   }
 };
 
-export default GalleryItem;
+export default GridItem;

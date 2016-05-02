@@ -16,6 +16,7 @@ const ListFilters = ({title = "", isAdvanced = false}) => {
   return (
           <div className="listFilters">
             <table>
+            <tbody>
               <tr>
                 <td>
                   <label>Filter by : </label>
@@ -34,6 +35,7 @@ const ListFilters = ({title = "", isAdvanced = false}) => {
                 {isAdvanced ? viewSwitcher : searchFilter}
                 </td>
               </tr>
+              </tbody>
              </table>
           </div>
   )
