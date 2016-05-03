@@ -41,7 +41,7 @@ Footer
     margin-right: 100px;
 } 
 
-.listFilters table td:nth-child(2) > :nth-child(1) > :nth-child(1){
+.listFilters table td center > :nth-child(1) > :nth-child(1){
     margin-right: 10px;
 }
 
@@ -64,13 +64,13 @@ Footer
     margin-left:10px;
     margin-bottom:10px;
     padding : 0px 7px 7px 7px;
-    border: 2px solid  dimgrey;
+    border: 1px solid  dimgrey;
     float:left;    
     background-color: whitesmoke;
 }
 
 .galleryItem .tileImg{
-    border: 2px solid  dimgrey;
+    border: 1px solid  dimgrey;
 }
 
 .tileHeader{    
@@ -106,10 +106,15 @@ Footer
 .listItem{    
     margin-left: 10px;    
     margin-bottom: 7px;
-    border: 2px solid  dimgrey;    
+    border: 1px solid  dimgrey;   
+}
+.listBareItem{
+    margin-left : 10px;
+}
+.listDetailedItem{    
     height : 150px;
 }
-.listItem div{ 
+.listDetailedItem div{ 
     float:left;
     height : 150px;
 }
@@ -165,7 +170,7 @@ Footer
 }
 
 .popup {
-    border: 2px solid  dimgrey;
+    border: 1px solid  dimgrey;
     display : none;
 	position: fixed;
 	background-color: white;
@@ -197,7 +202,6 @@ Footer
 .viewSwitcher:hover{
     height: 30px;
     width: 30px;
-    opacity: 1;
 }
 
 .gridSwitcher .viewSwitcherSelected{
@@ -213,7 +217,10 @@ Footer
 }
 
 .viewSwitcherSelected{
-   opacity: 1;
+   opacity: 1;   
+   border: 1px solid  dimgrey;
+   border-radius: 5px;
+   padding : 2px;
 }
 
 

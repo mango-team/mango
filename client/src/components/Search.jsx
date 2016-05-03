@@ -35,7 +35,7 @@ class Search extends React.Component {
           <h4>Search</h4>
           <p>{resultNr} results in {resultTime} seconds</p>   
           <ListFilters isAdvanced="true" {...options}/>        
-            <Gallery imageList={this.context.imageList} isBare={this.state.isBareView} tileType={this.context.tileType.Deletable} isList={this.state.isListView} />
+            <Gallery imageList={this.context.imageList} isBare={this.state.isBareView} tileType={this.context.tileType.Addable} isList={this.state.isListView} />
         </div>
         )
   }

@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Link } from 'react-router'
 
-const TileHeader = ({title, tileType, isBare, detailHref, doOpenPopup=function(){} }) => {
+const TileHeader = ({title, tileType, showIcon=false, to, doOpenPopup=function(){} }) => {
     var deletable = 
     <img src="https://cdn3.iconfinder.com/data/icons/faticons/32/remove-01-512.png" height="20px" width="20px"/>;
     
@@ -11,10 +11,10 @@ const TileHeader = ({title, tileType, isBare, detailHref, doOpenPopup=function()
 
   return (
       <div className="tileHeader">
-        <Link to={detailHref} onClick={doOpenPopup}>
+        <Link to={to} onClick={doOpenPopup}>
           <h5 className="titleTileHeader" title={title}>{title}</h5>
         </Link>
-        {isBare ? "" : <a href="#" className="iconTileHeader">{tileType == "Deletable" ? deletable : addable }</a>}
+        {showIcon ? "" : <a href="#" className="iconTileHeader">{tileType == "Deletable" ? deletable : addable }</a>}
       </div>
   )
 };

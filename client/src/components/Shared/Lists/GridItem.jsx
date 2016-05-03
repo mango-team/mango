@@ -28,13 +28,13 @@ class GridItem extends React.Component {
     };
     
     var detailPage = tile.detailPage + encodeURIComponent(tile.name); 
-    var detailHref = isBare ? "" : detailPage;
+    var to = isBare ? "" : detailPage;
     var doOpenPopup = isBare ? openPopup : function(){};
     
   return (
       <div className="galleryItem">        
-          <TileHeader title={tile.name} tileType={tileType} detailHref={detailHref} doOpenPopup={doOpenPopup}/>
-          <Link to={detailHref} onClick={doOpenPopup}>
+          <TileHeader title={tile.name} tileType={tileType} to={to} doOpenPopup={doOpenPopup}/>
+          <Link to={to} onClick={doOpenPopup}>
             <img  className="tileImg"
                     src={tile.src}
                     alt={tile.name}
@@ -44,7 +44,7 @@ class GridItem extends React.Component {
             />
         </Link>
         {isBare ? <Popup name={popupName}>
-                    <TileHeader title={tile.name} tileType={tileType} isBare={isBare} detailHref={detailPage}/>
+                    <TileHeader title={tile.name} tileType={tileType} showIcon={isBare} to={detailPage}/>
                     <GridInfo tile={tile}/>
                     <Link to={detailPage}>
                         <img  className="tileImg"
@@ -55,7 +55,8 @@ class GridItem extends React.Component {
                                 title={tile.name}
                         />
                     </Link>
-                </Popup> : <GridInfo tile={tile}/>}
+                </Popup> : <GridInfo tile={tile}/>
+          }
       </div>
   )
   }
