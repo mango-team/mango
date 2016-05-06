@@ -21,15 +21,24 @@ Footer
     width: 85%;
 }
 
-.listFilters{    
+.pageContentCenter{
     margin: auto;
-    /* Same width than .gallery */
-    width: 1160px;  /* 1596px for 3 detailed by row; 1160px for 5 bare by row */
+    /* Same width than .listFilters */
+    width: 1130px; 
+    border: 1px solid  dimgrey;
+}
+
+.listFilters{  
+    position: relative;      
+    background-color: gainsboro;
+}
+
+.listFilters *{    
+    z-index: inherit;
 }
 
 .listFilters table{
-    margin-left:10px;
-    height : 50px;
+    height : 40px;
     width: 100%;
 } 
 
@@ -45,6 +54,10 @@ Footer
     margin-right: 10px;
 }
 
+.listFilters table td select{
+    margin-right : 10px;
+}
+
 .listFilters table td:nth-child(3) > :nth-child(1){
     float: right;
 }
@@ -53,24 +66,90 @@ Footer
     margin-bottom: -9px;
 }
 
-/* Shared */
-.gallery {
+.readerContent{
+    position: relative;
+    margin: auto;   
+    border: 1px solid  dimgrey;
+}
+
+.aboveFade{    
+    z-index: 1001;
+}
+
+.readerContent *{
+}
+
+#readerRight{
+    position: absolute;
+    background-color: transparent;
+    display: block;
+    top: 0px;
+    left: 0px;
+    width: calc(100% / 2 - 3px); 
+    height : 100%;
+}
+
+#readerRight:hover div{
+    display: block;
+}
+
+#readerLeft{    
+    position: absolute;
+    background-color: transparent;
+    top: 0px;
+    right: 0px;
+    width: calc(100% / 2 - 3px);       
+    height : 100%;
+}
+
+#readerLeft:hover div{
+    display: block;
+}
+
+.readerNav{
+    display: none;
+    opacity : 0.3;
+    background: black;    
+    width: 150px;     
+    height : 100%;
+}
+
+.readerNav img{
+    height : 128px;
+    width : 128px;
+    -webkit-filter: invert(100%); filter: invert(100%);
+}
+
+#readerNavLeft{ 
+    margin-right : calc(100% - 150px); 
+}
+
+#readerNavRight{  
+    margin-left : calc(100% - 150px);  
+}
+
+#readerImage{
     margin: auto;
-    /* Same width than .listFilters */
-    width: 1160px;  /* 1596px for 3 detailed by row; 1160px for 5 bare by row */
+    width : 100%;
+}
+
+/* Shared */
+
+.gallery { 
+     margin-left: -10px; 
 }
 
 .galleryItem {
-    margin-left:10px;
-    margin-bottom:10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
     padding : 0px 7px 7px 7px;
-    border: 2px solid  dimgrey;
+    border: 1px solid  dimgrey;
     float:left;    
     background-color: whitesmoke;
 }
 
 .galleryItem .tileImg{
-    border: 2px solid  dimgrey;
+    border: 1px solid  dimgrey;
 }
 
 .tileHeader{    
@@ -83,7 +162,7 @@ Footer
     position: absolute;
     top: 0px;
     right: 5px;    
-    z-index: 1000;
+    z-index: 999;
 }
 
 .titleTileHeader{
@@ -97,7 +176,7 @@ Footer
 
 .galleryItemContent  { 
     float:left;
-    width: 300px;
+    width: 342px;
     display:block;
     height : 304px;
     overflow-y: scroll;
@@ -106,7 +185,7 @@ Footer
 .listItem{    
     margin-left: 10px;    
     margin-bottom: 7px;
-    border: 2px solid  dimgrey;    
+    border: 1px solid  dimgrey;    
     height : 150px;
 }
 .listItem div{ 
@@ -128,7 +207,7 @@ Footer
 }
 .listItemContentDescription {
     margin-top : 10px; 
-    width : 770px;
+    width : calc(100% - 100px - 250px - 28px) ;
     overflow: hidden;
 }
 
@@ -158,14 +237,14 @@ Footer
 	width: 100%;
 	height: 100%;
 	background-color: black;
-	z-index:1001;
+	z-index:1000;
 	-moz-opacity: 0.8;
 	opacity:.80;
 	filter: alpha(opacity=80);
 }
 
 .popup {
-    border: 2px solid  dimgrey;
+    border: 1px solid  dimgrey;
     display : none;
 	position: fixed;
 	background-color: white;

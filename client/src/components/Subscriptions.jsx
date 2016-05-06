@@ -30,9 +30,11 @@ class Subscriptions extends React.Component {
     };
     return (
           <div className="pageContent">
-            <h4>Subscriptions</h4>          
-            <ListFilters title="subscriptions" {...options}/>
-            <Gallery imageList={this.context.imageList} isBare={this.state.isBareView} tileType={this.context.tileType.Deletable} isList={this.state.isListView} />
+            <h4>Subscriptions</h4>
+            <div className="pageContentCenter">          
+              <ListFilters title="subscriptions" {...options}/>
+              <Gallery imageList={this.context.imageList} isBare={this.state.isBareView} tileType={this.context.tileType.Deletable} isList={this.state.isListView} />
+            </div>
           </div>
           )
   };

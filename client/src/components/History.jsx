@@ -36,8 +36,10 @@ class History extends React.Component {
           <input type="submit" defaultValue="Clear history" title="Delete all your current history" onClick={""} />
           <input type="submit" defaultValue="Pause history" title="Stop tracking your browsing" onClick={""} />
           </center>
-          <ListFilters title="history" {...options}/>
-          <Gallery imageList={this.context.imageList} isBare={this.state.isBareView} tileType={this.context.tileType.Deletable} isList={this.state.isListView} />
+          <div className="pageContentCenter">     
+            <ListFilters title="history" {...options}/>
+            <Gallery imageList={this.context.imageList} isBare={this.state.isBareView} tileType={this.context.tileType.Deletable} isList={this.state.isListView} />
+          </div>
         </div>
         )
   }
