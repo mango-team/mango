@@ -31,6 +31,7 @@ Footer
 .listFilters{  
     position: relative;      
     background-color: gainsboro;
+    border-bottom: 1px solid  dimgrey;
 }
 
 .listFilters *{    
@@ -183,9 +184,8 @@ Footer
     overflow-x: hidden;
 }
 .listItem{    
-    margin-left: 10px;    
-    margin-bottom: 7px;
-    border: 1px solid  dimgrey;   
+    margin-left: 10px;  
+    border-bottom: 1px solid  dimgrey;   
 }
 .listBareItem{
     margin-left : 10px;
@@ -195,25 +195,27 @@ Footer
 }
 .listDetailedItem div{ 
     float:left;
-    height : 150px;
 }
 .listItem div p {
     line-height: 100%;
 }
 .listItemContentImg {     
     width: 100px;
-    border-right: 2px solid  dimgrey;
+    border-right: 1px solid  dimgrey;
     margin-right: 10px;
+    height : 150px;
 }
 .listItemContentSideInfo { 
     margin-top : 10px;
     width : 250px;    
     margin-right : 10px;
+    height : 140px;
 }
 .listItemContentDescription {
     margin-top : 10px; 
     width : calc(100% - 100px - 250px - 28px) ;
     overflow: hidden;
+    height : 140px;
 }
 
 .slider{
