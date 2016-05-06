@@ -36,7 +36,7 @@ const Home = (props, context) => {
               isBare={true} 
               tileType={context.tileType.Addable} 
               name="RecommendedByFriends" 
-              title="Recomented by your friends" 
+              title="Recomended by your friends" 
               linkTo="/Recommended"
             />
            </div>

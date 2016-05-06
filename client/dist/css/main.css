@@ -50,7 +50,7 @@ Footer
     margin-right: 100px;
 } 
 
-.listFilters table td:nth-child(2) > :nth-child(1) > :nth-child(1){
+.listFilters table td center > :nth-child(1) > :nth-child(1){
     margin-right: 10px;
 }
 
@@ -185,10 +185,15 @@ Footer
 .listItem{    
     margin-left: 10px;    
     margin-bottom: 7px;
-    border: 1px solid  dimgrey;    
+    border: 1px solid  dimgrey;   
+}
+.listBareItem{
+    margin-left : 10px;
+}
+.listDetailedItem{  
     height : 150px;
 }
-.listItem div{ 
+.listDetailedItem div{ 
     float:left;
     height : 150px;
 }
@@ -276,7 +281,6 @@ Footer
 .viewSwitcher:hover{
     height: 30px;
     width: 30px;
-    opacity: 1;
 }
 
 .gridSwitcher .viewSwitcherSelected{
@@ -292,7 +296,10 @@ Footer
 }
 
 .viewSwitcherSelected{
-   opacity: 1;
+   opacity: 1;   
+   border: 1px solid  dimgrey;
+   border-radius: 5px;
+   padding : 2px;
 }
 
 

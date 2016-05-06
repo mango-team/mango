@@ -33,11 +33,17 @@ class Search extends React.Component {
   return (
         <div className="pageContent">
           <h4>Search</h4>
+<<<<<<< HEAD
           <p>{resultNr} results in {resultTime} seconds</p>
           <div className="pageContentCenter">        
             <ListFilters isAdvanced="true" {...options}/>        
             <Gallery imageList={this.context.imageList} isBare={this.state.isBareView} tileType={this.context.tileType.Deletable} isList={this.state.isListView} />
           </div>
+=======
+          <p>{resultNr} results in {resultTime} seconds</p>   
+          <ListFilters isAdvanced="true" {...options}/>        
+            <Gallery imageList={this.context.imageList} isBare={this.state.isBareView} tileType={this.context.tileType.Addable} isList={this.state.isListView} />
+>>>>>>> 5037ef93e5cfa8e3567640017ee36b270b9a53d8
         </div>
         )
   }
