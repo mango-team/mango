@@ -22,10 +22,17 @@ Footer
 }
 
 .pageContentCenter{
+    position: relative;
     margin: auto;
     /* Same width than .listFilters */
     width: 1130px; 
     border: 1px solid  dimgrey;
+}
+
+#reader:-webkit-full-screen {
+    background-color: black;
+  width: 100%;
+  height: 100%;
 }
 
 .listFilters{  
@@ -70,7 +77,8 @@ Footer
 .readerContent{
     position: relative;
     margin: auto;   
-    border: 1px solid  dimgrey;
+    overflow: auto;
+    height : 1000px; /*Heigh set in javascript, do not uncomment*/
 }
 
 .aboveFade{    
@@ -131,7 +139,6 @@ Footer
 
 #readerImage{
     margin: auto;
-    width : 100%;
 }
 
 /* Shared */
