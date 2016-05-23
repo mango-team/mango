@@ -14,7 +14,7 @@ const Popup = ({name, children, title}) => {
             </h5>
         </center>;
     return (
-        <div>
+        <span>
             <div id={popupId} className="popup">
                 <a className="popupCloseBtn" href="javascript:void(0)" onClick={closePopup}>
                     <img src="https://cdn3.iconfinder.com/data/icons/faticons/32/remove-01-512.png" height="20px" width="20px"/>
@@ -25,7 +25,7 @@ const Popup = ({name, children, title}) => {
                 </div>
             </div>
             <div id={fadeId} className="blackOverlay"></div>
-        </div>
+        </span>
     )
 };
 

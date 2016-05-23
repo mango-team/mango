@@ -206,7 +206,7 @@ Footer
 
 .galleryItemContent  { 
     float:left;
-    width: 342px;
+    width: 500px; /*342px*/
     display:block;
     height : 304px;
     overflow-y: scroll;
@@ -299,14 +299,32 @@ Footer
     z-index: 2000;    
 }
 
-.popupTitle{   
+.popupTitle, .tooltipTitle{   
     position: relative;
     height : 30px;  
     color : black; 
 }
 
-.popupContent  { 
+.popupContent, tooltipContent{ 
     float:left;
+}
+
+.tooltipContainer span.tooltip {
+    z-index: 1010;
+    display: none;
+    width : 705px;
+    padding: 14px 20px;
+    margin-top: -35px; 
+    margin-left: 28px;
+    border-radius: 4px;
+    box-shadow: 5px 5px 8px #CCC;
+}
+
+.tooltipContainer:hover span.tooltip{
+    display:inline; 
+    position:absolute; 
+    color:#111;
+    border:1px solid dimgrey; background:whitesmoke;  
 }
 
 .viewSwitcher:hover{

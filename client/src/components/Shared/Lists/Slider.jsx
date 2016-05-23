@@ -42,10 +42,11 @@ class Slider extends React.Component {
         var slider = [];
         var currentImage = 0;
         var sliderContentId = "sliderContent" + name;
+        var isTooltip= true;
 
         for (currentImage = this.state.range[0]; currentImage < this.state.range[1] && currentImage < this.state.imageList.length; currentImage++) {
             var element = this.state.imageList[currentImage];
-            slider.push(<GridItem tile={element} isBare={isBare} tileType={tileType} key={element.name}/>);
+            slider.push(<GridItem tile={element} isBare={isBare} isTooltip={isTooltip} tileType={tileType} key={element.name}/>);
         }
 
         return (
