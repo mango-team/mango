@@ -16,12 +16,14 @@ class Gallery extends React.Component {
           isList
     } = this.props;
     
+    var isTooltip = true;
+    
     return (
         <div className="gallery">
           {imageList.map(function(element){                
                   return (
                   isList ? <ListItem tile={element} isBare={isBare} tileType={tileType} key={element.name}/>
-                  : <GridItem tile={element} isBare={isBare} tileType={tileType} key={element.name}/>
+                  : <GridItem tile={element} isBare={isBare} isTooltip={isTooltip} tileType={tileType} key={element.name}/>
                   )
               })}
         </div>

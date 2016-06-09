@@ -8,18 +8,18 @@ import SignUpLink from './SignUpLink';
 
 export default class Links extends React.Component {
   render() {
-    var loggedInLinks = 
-        <nav className="mdl-navigation">
-            <Notifications />
-            <ProfileLink />
-        </nav>;
-        
-        var loggedOutLinks = 
-        <nav className="mdl-navigation">
-            <SignInLink />
-            <SignUpLink />
-        </nav>;
-        
+    var loggedInLinks =
+      <nav className="mdl-navigation">
+        <Notifications />
+        <ProfileLink />
+      </nav>;
+
+    var loggedOutLinks =
+      <nav className="mdl-navigation">
+        <SignInLink />
+        <SignUpLink />
+      </nav>;
+
     return (
       <div>
         {this.props.userLoggedIn ? loggedInLinks : loggedOutLinks}

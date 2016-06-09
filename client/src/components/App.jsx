@@ -16,14 +16,14 @@ class App extends React.Component {
   constructor(props) {
     super(props);
 
-   // Context allows to pass props directly from grandparent to grandchild without having to cascade the property to the parent
-   // Reduces props nesting complexity
-   this.constructor.childContextTypes = {
+    // Context allows to pass props directly from grandparent to grandchild without having to cascade the property to the parent
+    // Reduces props nesting complexity
+    this.constructor.childContextTypes = {
       imageList: React.PropTypes.array
-      ,tileType : React.PropTypes.object
+      , tileType: React.PropTypes.object
     };
   }
-    
+   
    getChildContext() {
     return { 
             imageList: ImageList
@@ -32,7 +32,7 @@ class App extends React.Component {
   }
   render() {
     var {
-          children
+      children
     } = this.props;
   return (
     <div className="mdl-layout mdl-js-layout mdl-layout--fixed-header">

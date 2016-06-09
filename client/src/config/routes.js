@@ -16,15 +16,15 @@ import Reader from '../components/Reader';
 export default (
   <Route path="/" component={App}>
     <IndexRoute component={Home}/>
-    <Route path="search" component={Search} /> 
-    <Route path="history" component={History} /> 
-    <Route path="playlists" component={Playlists} /> 
-    <Route path="subscriptions" component={Subscriptions} /> 
-    <Route path="discussions" component={Discussions} /> 
-    <Route path="settings" component={Settings} />     
-    <Route path="browse" component={Browse} />         
+    <Route path="search" component={Search} />
+    <Route path="history" component={History} />
+    <Route path="playlists" component={Playlists} />
+    <Route path="subscriptions" component={Subscriptions} />
+    <Route path="discussions" component={Discussions} />
+    <Route path="settings" component={Settings} />
+    <Route path="browse" component={Browse} />
     <Route path="detail" component={Detail} />
-    <Route path="reader" component={Reader} /> 
+    <Route path="reader" component={Reader} />
     <Route path="*" component={Home} /> { /* Catch all route. 404 later? */}
   </Route>
 )
