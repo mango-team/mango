@@ -1,8 +1,12 @@
 import React from 'react';
+import { Button } from 'react-toolbox/lib/button';
 
 const Home = () => {
     return (
-        <p>Home</p>
+        <div>
+            <p>Home</p>
+            <Button label='Primary Button' primary />
+        </div>
     )
 };
 

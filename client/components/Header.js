@@ -1,22 +1,17 @@
 import React from 'react';
 
-import { Link } from 'react-router'
+import { Link } from 'react-router';
+
+import { AppBar, Navigation, IconButton, Link as L } from 'react-toolbox';
 
 const Header = () => {
   return (
-    <header className="mdl-layout__header">
-      <div className="mdl-layout__header-row">
-        <span className="mdl-layout-title">
-            <a href="/">
-                <img width="35px" height="35px" src="https://cdn2.iconfinder.com/data/icons/fruit-flat-transparent/512/mango-128.png" />
-                <span>Mango</span>
-            </a>
-        </span>
-        <Link className="mdl-navigation__link" to="/browse">Browse</Link>
-        <div className="mdl-layout-spacer"></div>
-
-      </div>
-    </header>
+    <AppBar fixed flat>
+        <Navigation type="horizontal">
+          <L active><Link to="/">Mango</Link></L>
+          <L><Link to="/browse">Browse</Link></L>
+        </Navigation>
+    </AppBar>
   )
 };
 

@@ -1,14 +1,18 @@
+import 'react-toolbox/lib/commons.scss';
+import '../styles/_theme.scss';
 import React from 'react';
-
 import Header from './Header';
+import { Layout, Panel } from 'react-toolbox';
 
-const Layout = (props) => {
+const PageLayout = (props) => {
     return (
-        <div className="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-            <Header />
-            {React.cloneElement(props.children, props)}
-        </div>
+        <Layout>
+            <Panel>
+                <Header />
+                {React.cloneElement(props.children, props)}
+            </Panel>
+        </Layout>
     );
 };
 
-export default Layout;
+export default PageLayout;
