@@ -47,7 +47,7 @@ With the will to never give up and a great left hook along with his ninja way: t
                         volume: '1',
                         releaseDate: new Date(),
                         scanlators: [
-
+                            
                         ],
                         comments: [
                             {
