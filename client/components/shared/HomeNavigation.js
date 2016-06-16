@@ -7,6 +7,7 @@ const HomeNavigation = ({ active }) => {
         <Navigation type="horizontal">
             <Link to="/" className={ active == 'home' ? "active" : '' }>Home</Link>
             <Link to="/feed/trending" className={ active == 'trending' ? "active" : '' }>Trending</Link>
+            <Link to="/history" className={ active == 'history' ? "active" : '' }>History</Link>
         </Navigation>
     )
 }

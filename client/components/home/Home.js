@@ -4,7 +4,7 @@ import { Link } from 'react-router';
 import HomeNavigation from '../shared/HomeNavigation';
 import Listing from '../shared/Listing';
 
-const Connected = (props) => {
+const Home = (props) => {
     const listingFrom = (list, callback) => {
         const items = [];
 
@@ -61,4 +61,4 @@ const Connected = (props) => {
     );
 };
 
-export default Connected;
+export default Home;

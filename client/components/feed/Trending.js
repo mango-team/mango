@@ -6,8 +6,7 @@ import HomeNavigation from '../shared/HomeNavigation';
 
 const Trending = () => {
     return(
-        <div>
-            <HomeNavigation active="trending" />
+        <div>Trending
         </div>
     )
 };
