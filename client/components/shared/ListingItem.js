@@ -14,14 +14,14 @@ class ListingItem extends React.Component {
     }
 
     likes() {
-        let likes = 0;
+        const likes = typeof this.props.item.likes == 'undefined' ? 0 : this.props.item.likes.length;
         return (
             <span>{likes}</span>
         )
     }
 
     render() {
-        const { item, itemUrl } = this.props;
+        const { item } = this.props;
         return (
             <div className="listing-item">
                 <div className="header">
@@ -30,7 +30,7 @@ class ListingItem extends React.Component {
                     {this.likes()}
                 </div>
                 <div className="content">
-                    <Link to={item.url}>
+                    <Link to={item.url} title={item.description}>
                         <img src={item.coverPictureUrl} />
                     </Link>
                 </div>

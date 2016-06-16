@@ -7,14 +7,19 @@ import History from './components/feed/History';
 import WatchHistory from './components/feed/History/Watch';
 import SearchHistory from './components/feed/History/Search';
 import Recommended from './components/feed/Recommended';
+import RecommendedByFriends from './components/feed/RecommendedByFriends';
 import Subscriptions from './components/feed/Subscriptions';
+import Updates from './components/feed/Updates';
+import Resume from './components/feed/Resume';
+import Trending from './components/feed/Trending';
 import User from './components/User';
 import HomeUser from './components/user/Home';
 import DiscussionUser from './components/user/Discussion';
 import AboutUser from './components/user/About';
 import SignIn from './components/SignIn';
 import SignUp from './components/SignUp';
-import MangaViewer from './components/MangaViewer';
+import Manga from './components/Manga';
+import NotFound from './components/NotFound';
 
 import { Router, Route, IndexRoute } from 'react-router';
 import { Provider } from 'react-redux';
@@ -32,7 +37,11 @@ const router = (
                         <IndexRoute component={WatchHistory} />
                         <Route path="search" component={SearchHistory} />
                     </Route>
+                    <Route path="trending" component={Trending} />
                     <Route path="recommended" component={Recommended} />
+                    <Route path="recommended-by-friends" component={RecommendedByFriends} />
+                    <Route path="updates" component={Updates} />
+                    <Route path="resume" component={Resume} />
                     <Route path="subscriptions" component={Subscriptions} />
                 </Route>
                 <Route path="user/:username" component={User}>
@@ -40,7 +49,8 @@ const router = (
                     <Route path="discussion" component={DiscussionUser} />
                     <Route path="about" component={AboutUser} />
                 </Route>
-                <Route path="manga/:id/:name" component={MangaViewer} />
+                <Route path="manga/:id/:name" component={Manga} />
+                <Route path="*" component={NotFound} />
             </Route>
         </Router>
     </Provider>    

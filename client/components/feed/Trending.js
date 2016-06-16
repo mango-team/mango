@@ -2,16 +2,16 @@ import React from 'react';
 import { Link } from 'react-router';
 import { Navigation } from 'react-toolbox';
 
-const Subscriptions = () => {
-    return (
+const Trending = () => {
+    return(
         <div>
             <Navigation type="horizontal">
                 <Link to="/">Home</Link>
-                <Link to="/feed/trending">Trending</Link>
-                <Link to="/feed/subscriptions" className="active">Subscriptions</Link>
+                <Link to="/feed/trending" className="active">Trending</Link>
+                <Link to="/feed/subscriptions">Subscriptions</Link>
             </Navigation>
         </div>
     )
 };
 
-export default Subscriptions;
+export default Trending;

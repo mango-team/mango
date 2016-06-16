@@ -1,8 +1,27 @@
 import React from 'react';
+import { Link } from 'react-router';
+import { Navigation } from 'react-toolbox';
+import Listing from '../shared/Listing';
 
-const Recommended = () => {
+
+const Recommended = ({ user }) => {
     return (
-        <p>Recommended</p>
+        <div>
+            <Navigation type="horizontal">
+                <Link to="/">Home</Link>
+                <Link to="/feed/trending">Trending</Link>
+                <Link to="/feed/subscriptions">Subscriptions</Link>
+            </Navigation>
+
+            <div>
+                <Navigation type="horizontal">
+                    <Link to="/feed/recommended">Recommended for you</Link>
+                    <Link to="/feed/history">Based on your history</Link>
+                </Navigation>
+
+                {user && <Listing items={[]} />}
+            </div>
+        </div>
     )
 };
 
