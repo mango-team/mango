@@ -36,6 +36,7 @@ const router = (
                 <Route path="signin" component={SignIn} />
                 <Route path="signup" component={SignUp} />
                 <Route path="feed"  component={Feed}>
+                    <IndexRoute component={NotFound} />
                     <Route path="trending" component={Trending} />
                     <Route path="recommended" component={Recommended} />
                     <Route path="recommended-by-friends" component={RecommendedByFriends} />
