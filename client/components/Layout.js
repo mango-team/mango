@@ -30,6 +30,8 @@ const PageLayout = (props) => {
                 <div  style={{ flex: 1, overflowY: 'auto', padding: '1.8rem' }}>
                     {React.cloneElement(props.children, { ...props, key: undefined, ref: undefined, userConnected, user })}
                 </div>
+                <footer>
+                </footer>
             </Panel>
         </Layout>
     );

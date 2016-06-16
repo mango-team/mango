@@ -8,19 +8,28 @@ const users = [
         subscriptions: [
             { 
                 type: 'manga',
-                date: new Date(),
+                date: Date.now(),
                 providerId: '1',
                 manga: 'Naruto',
                 notifyOnNewChapter: true,
                 lastChapter: {
                     id: '1',
-                    readOn: new Date(),
+                    readOn: Date.now(),
                 }
             }
         ],
         settings: {
 
-        }
+        },
+        history: [
+            { 
+                type: 'manga',
+                id: '1',
+                date: Date.now(),
+                chapter: '1',
+                page: 1
+            }
+        ]
     }
 ];
 

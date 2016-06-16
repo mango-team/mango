@@ -14,6 +14,7 @@ import DiscussionUser from './components/user/Discussion';
 import AboutUser from './components/user/About';
 import SignIn from './components/SignIn';
 import SignUp from './components/SignUp';
+import MangaViewer from './components/MangaViewer';
 
 import { Router, Route, IndexRoute } from 'react-router';
 import { Provider } from 'react-redux';
@@ -39,6 +40,7 @@ const router = (
                     <Route path="discussion" component={DiscussionUser} />
                     <Route path="about" component={AboutUser} />
                 </Route>
+                <Route path="manga/:id/:name" component={MangaViewer} />
             </Route>
         </Router>
     </Provider>    

@@ -10,13 +10,17 @@ import authors from './data/authors';
 import providers from './data/providers';
 import users from './data/users';
 import app from './data/app';
+import chapters from './data/chapters';
+import mangas from './data/mangas';
 
 // create an object for the default data
 const defaultState = {
     authors,
     providers,
     users,
-    app
+    app,
+    chapters,
+    mangas
 };
 
 const enhancers = compose(
