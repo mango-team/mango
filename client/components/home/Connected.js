@@ -4,103 +4,65 @@ import { Navigation } from 'react-toolbox';
 
 import Listing from '../shared/Listing';
 
-class Connected extends React.Component {
-    constructor(props){
-        super(props);
-    }
+const Connected = (props) => {
+    const listingFrom = (list, callback) => {
+        const items = [];
 
-    recentUpdates() {
-        return [];
-    }
-    
-    resumeViewing() {
-        const { user, mangas } = this.props;
-        const { history } = user;
-        let items = [];
+        if(Array.isArray(list)) {
+            const { mangas } = props;
 
-        if(history) {
-            history.forEach((item, index) => {
-                if(item.type === 'manga') {
-                    let manga = mangas.find((m) => m.id == item.id);
+            list.forEach((listItem) => {
+                if(listItem && listItem.type === 'manga') {
+                    const manga = mangas.find((m) => m.id == listItem.id);
                     if(manga) {
-                        manga.url = `/manga/${manga.id}/${manga.name}`;
-                        items.push(manga);
+                        let additionalData = {};
+                        if(typeof callback == 'function') {
+                            additionalData = callback({listItem, manga, list, mangas});
+                        }
+                        const item = Object.assign({}, manga, additionalData);
+                        items.push(item);
                     }
                 }
             });
         }
-        
+
         return items;
+    };
+
+    const detailPageUrl = ({ manga }) => {
+        return { url: `/manga/${manga.id}/${manga.name}` };
+    };
+
+    const chapterPageUrl = ({manga, listItem }) => {
+        return { url: `/view/manga/${manga.id}/${manga.name}/${listItem.chapter}/${listItem.page}` };
     }
 
-    friendRecommendation() {
-        const { app, mangas } = this.props;
-        const { friendsRecommendations } = app;
-        let items = [];
-
-        if(friendsRecommendations) {
-            friendsRecommendations.forEach((item, index) => {
-                if(item.type === 'manga') {
-                    let manga = mangas.find((m) => m.id == item.id);
-                    if(manga) {
-                        manga.url = `/manga/${manga.id}/${manga.name}`;
-                        items.push(manga);
-                    }
-                }
-            });
-        }
-        
-        return items;
-    }
-
-    systemRecommendation() {
-        const { app, mangas } = this.props;
-        const { systemRecommendations } = app;
-        let items = [];
-
-        if(systemRecommendations) {
-            systemRecommendations.forEach((item, index) => {
-                if(item.type === 'manga') {
-                    let manga = mangas.find((m) => m.id == item.id);
-                    if(manga) {
-                        manga.url = `/manga/${manga.id}/${manga.name}`;
-                        items.push(manga);
-                    }
-                }
-            });
-        }
-        
-        return items;
-    }
-
-    render() {
-        return (
+    return (
+        <div>
+            <Navigation type="horizontal">
+                <Link to="/" className="active">Home</Link>
+                <Link to="/feed/trending">Trending</Link>
+                <Link to="/feed/subscriptions">Subscriptions</Link>
+            </Navigation>
             <div>
-                <Navigation type="horizontal">
-                    <Link to="/" className="active">Home</Link>
-                    <Link to="/feed/trending">Trending</Link>
-                    <Link to="/feed/subscriptions">Subscriptions</Link>
-                </Navigation>
-                <div>
-                    <Listing 
-                        title={<Link to="/feed/updates">Recent updates</Link>} 
-                        items={this.recentUpdates()} />
+                <Listing 
+                    title={<Link to="/feed/updates">Recent updates</Link>} 
+                    items={listingFrom([])} />
 
-                    <Listing 
-                        title={<Link to="/feed/resume">Resume viewing</Link>} 
-                        items={this.resumeViewing()} />
+                <Listing 
+                    title={<Link to="/feed/resume">Resume viewing</Link>} 
+                    items={listingFrom(props.user.history, chapterPageUrl)} />
 
-                    <Listing 
-                        title={<Link to="/feed/recommended-by-friends">Recommended by your friends</Link>} 
-                        items={this.friendRecommendation()} />
+                <Listing 
+                    title={<Link to="/feed/recommended-by-friends">Recommended by your friends</Link>} 
+                    items={listingFrom(props.app.friendsRecommendations, detailPageUrl)} />
 
-                    <Listing 
-                        title={<Link to="/feed/recommended">Recommended by our system</Link>} 
-                        items={this.systemRecommendation()} />
-                </div>
+                <Listing 
+                    title={<Link to="/feed/recommended">Recommended by our system</Link>} 
+                    items={listingFrom(props.app.systemRecommendations, detailPageUrl)} />
             </div>
-        )
-    }
+        </div>
+    );
 };
 
 export default Connected;

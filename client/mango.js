@@ -19,6 +19,7 @@ import AboutUser from './components/user/About';
 import SignIn from './components/SignIn';
 import SignUp from './components/SignUp';
 import Manga from './components/Manga';
+import MangaViewer from './components/MangaViewer';
 import NotFound from './components/NotFound';
 
 import { Router, Route, IndexRoute } from 'react-router';
@@ -50,6 +51,7 @@ const router = (
                     <Route path="about" component={AboutUser} />
                 </Route>
                 <Route path="manga/:id/:name" component={Manga} />
+                <Route path="view/manga/:id/:name/:chapter(/:page)" component={MangaViewer} />
                 <Route path="*" component={NotFound} />
             </Route>
         </Router>
