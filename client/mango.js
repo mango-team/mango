@@ -8,14 +8,15 @@ import WatchHistory from './components/feed/History/Watch';
 import SearchHistory from './components/feed/History/Search';
 import Recommended from './components/feed/Recommended';
 import RecommendedByFriends from './components/feed/RecommendedByFriends';
-import Subscriptions from './components/feed/Subscriptions';
 import Updates from './components/feed/Updates';
 import Resume from './components/feed/Resume';
 import Trending from './components/feed/Trending';
 import User from './components/User';
-import HomeUser from './components/user/Home';
-import DiscussionUser from './components/user/Discussion';
-import AboutUser from './components/user/About';
+import UserHome from './components/user/Home';
+import UserDiscussion from './components/user/Discussion';
+import UserAbout from './components/user/About';
+import UserPlaylists from './components/user/Playlists';
+import UserSubscriptions from './components/user/Subscriptions';
 import SignIn from './components/SignIn';
 import SignUp from './components/SignUp';
 import Manga from './components/Manga';
@@ -43,12 +44,13 @@ const router = (
                     <Route path="recommended-by-friends" component={RecommendedByFriends} />
                     <Route path="updates" component={Updates} />
                     <Route path="resume" component={Resume} />
-                    <Route path="subscriptions" component={Subscriptions} />
                 </Route>
                 <Route path="user/:username" component={User}>
-                    <IndexRoute component={HomeUser} />
-                    <Route path="discussion" component={DiscussionUser} />
-                    <Route path="about" component={AboutUser} />
+                    <IndexRoute component={UserHome} />
+                    <Route path="discussion" component={UserDiscussion} />
+                    <Route path="about" component={UserAbout} />
+                    <Route path="playlists" component={UserPlaylists} />
+                    <Route path="subscriptions" component={UserSubscriptions} />
                 </Route>
                 <Route path="manga/:id/:name" component={Manga} />
                 <Route path="view/manga/:id/:name/:chapter(/:page)" component={MangaViewer} />

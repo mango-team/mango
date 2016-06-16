@@ -22,7 +22,7 @@ const PageLayout = (props) => {
                 <AppBar>
                     <Link to="/">Mango</Link>
                     <Navigation type="horizontal">
-                        {userConnected && <Link to={`/user/${user.username}`}><Avatar title="Profile" image={user.profilePictureUrl} /></Link>}
+                        {userConnected && <Link to={`/user/${user.username}`}><Avatar title="Profile" image={user.avatarUrl} /></Link>}
                         {!userConnected && <Link to="signin">Sign in</Link>}
                         {!userConnected && <Link to="signup">Sign up</Link>}
                     </Navigation>

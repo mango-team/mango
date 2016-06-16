@@ -4,7 +4,8 @@ const users = [
         username: 'oalidou',
         firstName: 'Alidou',
         lastName: 'Ouedraogo',
-        profilePictureUrl: 'http://enzosakay.com/images/Profilelogo.png',
+        avatarUrl: 'http://enzosakay.com/images/Profilelogo.png',
+        coverUrl: 'http://yt3.ggpht.com/-6sFSluVE_eg/U1AwXf_lXaI/AAAAAAAAAAY/TLvrBD1eRQQ/w2120-fcrop64=1,00005a57ffffa5a8-nd-c0xffffffff-rj-k-no/channels4_banner.jpg',
         subscriptions: [
             { 
                 type: 'manga',

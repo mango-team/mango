@@ -1,17 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router';
 import { Navigation } from 'react-toolbox';
+
 import Listing from '../shared/Listing';
+import HomeNavigation from '../shared/HomeNavigation';
 
 
 const Recommended = ({ user }) => {
     return (
         <div>
-            <Navigation type="horizontal">
-                <Link to="/">Home</Link>
-                <Link to="/feed/trending">Trending</Link>
-                <Link to="/feed/subscriptions">Subscriptions</Link>
-            </Navigation>
+            <HomeNavigation />
 
             <div>
                 <Navigation type="horizontal">

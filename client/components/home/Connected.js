@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
-import { Navigation } from 'react-toolbox';
 
+import HomeNavigation from '../shared/HomeNavigation';
 import Listing from '../shared/Listing';
 
 const Connected = (props) => {
@@ -39,11 +39,7 @@ const Connected = (props) => {
 
     return (
         <div>
-            <Navigation type="horizontal">
-                <Link to="/" className="active">Home</Link>
-                <Link to="/feed/trending">Trending</Link>
-                <Link to="/feed/subscriptions">Subscriptions</Link>
-            </Navigation>
+            <HomeNavigation active="home" />
             <div>
                 <Listing 
                     title={<Link to="/feed/updates">Recent updates</Link>} 
