@@ -1,11 +1,12 @@
 import React from 'react';
-import { Button } from 'react-toolbox/lib/button';
+import Connected from './home/Connected';
+import Anonymous from './home/Anonymous';
 
-const Home = () => {
+const Home = (props) => {
+    const { userConnected } = props;
     return (
         <div>
-            <p>Home</p>
-            <Button label='Primary Button' primary />
+            {userConnected ? <Connected {...props} /> : <Anonymous {...props} />}
         </div>
     )
 };

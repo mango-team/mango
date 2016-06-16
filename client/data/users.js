@@ -4,6 +4,7 @@ const users = [
         username: 'oalidou',
         firstName: 'Alidou',
         lastName: 'Ouedraogo',
+        profilePictureUrl: 'http://enzosakay.com/images/Profilelogo.png',
         subscriptions: [
             { 
                 type: 'manga',

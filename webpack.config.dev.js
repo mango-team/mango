@@ -5,7 +5,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   context: __dirname,
-  devtool: 'inline-source-map',
+  devtool: 'source-map',
   entry: [
     'webpack-hot-middleware/client',
     './client/mango'
@@ -23,8 +23,8 @@ module.exports = {
     ]
   },
   plugins: [
-    new ExtractTextPlugin('react-toolbox.css', { allChunks: true }),
     new webpack.HotModuleReplacementPlugin(),
+    new ExtractTextPlugin('react-toolbox.css', { allChunks: true }),
     new webpack.NoErrorsPlugin()
   ],
   module: {

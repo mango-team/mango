@@ -12,6 +12,8 @@ import User from './components/User';
 import HomeUser from './components/user/Home';
 import DiscussionUser from './components/user/Discussion';
 import AboutUser from './components/user/About';
+import SignIn from './components/SignIn';
+import SignUp from './components/SignUp';
 
 import { Router, Route, IndexRoute } from 'react-router';
 import { Provider } from 'react-redux';
@@ -22,6 +24,8 @@ const router = (
         <Router history={history}>
             <Route path="/" component={App}>
                 <IndexRoute component={Home} />
+                <Route path="signin" component={SignIn} />
+                <Route path="signup" component={SignUp} />
                 <Route path="feed">
                     <Route path="history" component={History}>
                         <IndexRoute component={WatchHistory} />

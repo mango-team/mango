@@ -3,11 +3,12 @@ import { connect } from 'react-redux';
 import * as actionCreators from '../actions/actionCreators';
 import Layout from './Layout';
 
-function mapStateToProps({ authors, users, providers }) {
+function mapStateToProps({ authors, users, providers, app }) {
     return {
         authors,
         users,
-        providers
+        providers,
+        app
     }
 }
 
