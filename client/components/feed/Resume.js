@@ -1,8 +1,10 @@
 import React from 'react';
+import List from '../shared/List';
+import listFrom, { mangaChapterPageUrl } from '../helpers/listFrom';
 
-const Resume = () => {
+const Resume = (props) => {
     return (
-        <p>Resume</p>
+        <List items={listFrom(props, props.user.history, mangaChapterPageUrl)} />
     )
 };
 

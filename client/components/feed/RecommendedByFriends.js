@@ -1,8 +1,10 @@
 import React from 'react';
+import List from '../shared/List';
+import listFrom, { mangaDetailPageUrl } from '../helpers/listFrom';
 
-const RecommendedByFriends = () => {
+const RecommendedByFriends = (props) => {
     return (
-        <div>RecommendedByFriends</div>
+        <List items={listFrom(props, props.app.friendsRecommendations, mangaDetailPageUrl)} />
     )
 }
 

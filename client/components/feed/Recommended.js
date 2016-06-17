@@ -3,19 +3,18 @@ import { Link } from 'react-router';
 import { Navigation } from 'react-toolbox';
 
 import List from '../shared/List';
+import listFrom, { mangaDetailPageUrl } from '../helpers/listFrom';
 
 
-const Recommended = ({ user }) => {
+const Recommended = (props) => {
     return (
         <div>
-            <div>
-                <Navigation type="horizontal">
-                    <Link to="/feed/recommended"  data-react-toolbox="link">Recommended for you</Link>
-                    <Link to="/history"  data-react-toolbox="link">Based on your history</Link>
-                </Navigation>
+            <Navigation type="horizontal">
+                <Link to="/feed/recommended"  data-react-toolbox="link">Recommended for you</Link>
+                <Link to="/history"  data-react-toolbox="link">Based on your history</Link>
+            </Navigation>
 
-                {user && <List items={[]} />}
-            </div>
+            <List items={listFrom(props, props.app.systemRecommendations, mangaDetailPageUrl)} />
         </div>
     )
 };
