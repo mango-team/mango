@@ -1,11 +1,11 @@
 import React from 'react';
 import HomeNavigation from './shared/HomeNavigation';
+import childrenWithProps from './helpers/childrenWithProps';
 
-const Feed = ({ app, children }) => {
-    return (
+const Feed = (props) => {return (
         <div>
-            {app && <HomeNavigation />}
-            {children}
+            <HomeNavigation />
+            {childrenWithProps(props)}
         </div>
     )
 };

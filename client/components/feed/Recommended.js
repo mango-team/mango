@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router';
 import { Navigation } from 'react-toolbox';
 
-import Listing from '../shared/Listing';
+import List from '../shared/List';
 
 
 const Recommended = ({ user }) => {
@@ -10,11 +10,11 @@ const Recommended = ({ user }) => {
         <div>
             <div>
                 <Navigation type="horizontal">
-                    <Link to="/feed/recommended">Recommended for you</Link>
-                    <Link to="/feed/history">Based on your history</Link>
+                    <Link to="/feed/recommended"  data-react-toolbox="link">Recommended for you</Link>
+                    <Link to="/history"  data-react-toolbox="link">Based on your history</Link>
                 </Navigation>
 
-                {user && <Listing items={[]} />}
+                {user && <List items={[]} />}
             </div>
         </div>
     )

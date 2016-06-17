@@ -1,8 +1,10 @@
 import React from 'react';
+import List from '../shared/List';
+import listFrom, { mangaChapterPageUrl } from '../helpers/listFrom';
 
-const Updates = () => {
+const Updates = (props) => {
     return (
-        <p>Updates</p>
+        <List items={listFrom(props, props.app.updates, mangaChapterPageUrl)} />
     )
 };
 

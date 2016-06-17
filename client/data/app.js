@@ -19,6 +19,14 @@ const app = {
             type: 'manga',
             id: '1'
         }
+    ],
+    updates: [
+        {
+            type: 'manga',
+            id: '1',
+            chapter: '1',
+            page: 1
+        }
     ]
 };
 

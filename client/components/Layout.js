@@ -4,6 +4,7 @@ import React from 'react';
 //import Header from './Header';
 import { Link } from 'react-router';
 import { Layout, Panel, AppBar, Navigation, Avatar } from 'react-toolbox';
+import childrenWithProps from './helpers/childrenWithProps';
 
 const PageLayout = (props) => {
     let userConnected = typeof props.app.user != 'undefined';
@@ -15,7 +16,7 @@ const PageLayout = (props) => {
         user = props.users.find((value, index) => value.id == userId);
         userConnected = typeof user != 'undefined';
     }
-
+    
     return (
         <Layout>
             <Panel>
@@ -28,10 +29,9 @@ const PageLayout = (props) => {
                     </Navigation>
                 </AppBar>
                 <div  style={{ flex: 1, overflowY: 'auto', padding: '1.8rem' }}>
-                    {React.cloneElement(props.children, { ...props, key: undefined, ref: undefined, userConnected, user })}
+                    {childrenWithProps(props, { user })}
                 </div>
-                <footer>
-                </footer>
+                <footer></footer>
             </Panel>
         </Layout>
     );
