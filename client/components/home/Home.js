@@ -12,19 +12,23 @@ const Home = (props) => {
             <div>
                 <List 
                     title={<Link to="/feed/updates">Recent updates</Link>} 
-                    items={listFrom(props, props.app.updates, mangaChapterPageUrl)} />
+                    items={listFrom(props, props.app.updates, mangaChapterPageUrl)}
+                    {...props} />
 
                 <List 
                     title={<Link to="/feed/resume">Resume viewing</Link>} 
-                    items={listFrom(props, props.user.history, mangaChapterPageUrl)} />
+                    items={listFrom(props, props.user.history, mangaChapterPageUrl)}
+                    {...props} />
 
                 <List 
                     title={<Link to="/feed/recommended-by-friends">Recommended by your friends</Link>} 
-                    items={listFrom(props, props.app.friendsRecommendations, mangaDetailPageUrl)} />
+                    items={listFrom(props, props.app.friendsRecommendations, mangaDetailPageUrl)}
+                    {...props} />
 
                 <List 
                     title={<Link to="/feed/recommended">Recommended by our system</Link>} 
-                    items={listFrom(props, props.app.systemRecommendations, mangaDetailPageUrl)} />
+                    items={listFrom(props, props.app.systemRecommendations, mangaDetailPageUrl)} 
+                    {...props} />
             </div>
         </div>
     );

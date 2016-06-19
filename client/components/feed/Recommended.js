@@ -11,7 +11,7 @@ const Recommended = (props) => {
         <div>
             <Navigation type="horizontal">
                 <Link to="/feed/recommended"  data-react-toolbox="link">Recommended for you</Link>
-                <Link to="/history"  data-react-toolbox="link">Based on your history</Link>
+                <Link to="/feed/recommended-by-friends"  data-react-toolbox="link">Recommended by your friends</Link>
             </Navigation>
 
             <List items={listFrom(props, props.app.systemRecommendations, mangaDetailPageUrl)} />

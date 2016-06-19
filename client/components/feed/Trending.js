@@ -1,13 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router';
-import { Navigation } from 'react-toolbox';
+import List from '../shared/List';
+import listFrom, { mangaDetailPageUrl } from '../helpers/listFrom';
 
-import HomeNavigation from '../shared/HomeNavigation';
-
-const Trending = () => {
+const Trending = (props) => {
     return(
-        <div>Trending
-        </div>
+        <List items={listFrom(props, props.app.trending, mangaDetailPageUrl)} {...props} />
     )
 };
 

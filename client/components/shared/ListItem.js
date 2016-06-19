@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router';
+import { FontIcon } from 'react-toolbox';
 
 const ListItem = (props) => {
-    const { item } = props;
+    const { item, user } = props;
     const ratings = () => {
         let rating = 4;
         return (
@@ -12,7 +13,7 @@ const ListItem = (props) => {
     const likes = () => {
         const likes = typeof item.likes == 'undefined' ? 0 : item.likes.length;
         return (
-            <span>{likes}</span>
+            <span>{likes} <FontIcon value='favorite' onClick={() => props.like(item.type, item.id, user.id, Date.now()) } /></span>
         )
     }
 
