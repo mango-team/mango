@@ -1,13 +1,11 @@
-import React from 'react';
-import { Link } from 'react-router';
-import { Navigation } from 'react-toolbox';
+import React from 'react'
 
 const Subscriptions = () => {
-    return (
-        <div>
-            Subscriptions
-        </div>
-    )
-};
+  return (
+    <div>
+      Subscriptions
+    </div>
+  )
+}
 
-export default Subscriptions;
+export default Subscriptions

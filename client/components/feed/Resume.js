@@ -1,11 +1,12 @@
-import React from 'react';
-import List from '../shared/List';
-import listFrom, { mangaChapterPageUrl } from '../helpers/listFrom';
+import React from 'react'
+import List from '../shared/List'
+import listFrom, { mangaChapterPageUrl } from '../helpers/listFrom'
 
 const Resume = (props) => {
-    return (
-        <List items={listFrom(props, props.user.history, mangaChapterPageUrl)} {...props}  />
-    )
-};
+  const { currentUser } = props
+  return (
+    <List items={listFrom(props, currentUser.history, mangaChapterPageUrl)} {...props} />
+  )
+}
 
-export default Resume;
+export default Resume

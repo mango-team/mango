@@ -1,9 +1,9 @@
-import React from 'react';
+import React from 'react'
 
 const Watch = () => {
-    return (
-        <p>Watch</p>
-    )
-};
+  return (
+    <p>Watch</p>
+  )
+}
 
-export default Watch;
+export default Watch

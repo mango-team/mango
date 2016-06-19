@@ -3,7 +3,7 @@ import { Link } from 'react-router'
 import { FontIcon } from 'react-toolbox'
 
 const ListItem = (props) => {
-  const { item, user } = props
+  const { item, currentUser } = props
   const renderRatings = () => {
     let rating = 4
     return (
@@ -14,7 +14,7 @@ const ListItem = (props) => {
     const { likes } = props
     const itemLikes = (likes || []).filter((like) => like.itemType === item.type && like.itemId === item.id)
     return (
-        <span>{itemLikes.length} <FontIcon value='favorite' onClick={() => props.like(item.type, item.id, user.id, Date.now()) } /></span>
+        <span>{itemLikes.length} <FontIcon value='favorite' onClick={() => props.like(item.type, item.id, currentUser.id, Date.now()) } /></span>
     )
   }
 

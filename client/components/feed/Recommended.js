@@ -5,8 +5,8 @@ import { Navigation } from 'react-toolbox'
 import List from '../shared/List'
 import listFrom, { mangaDetailPageUrl } from '../helpers/listFrom'
 
-
 const Recommended = (props) => {
+  const { app } = props
   return (
         <div>
             <Navigation type='horizontal'>
@@ -14,7 +14,7 @@ const Recommended = (props) => {
                 <Link to='/feed/recommended-by-friends' data-react-toolbox='link'>Recommended by your friends</Link>
             </Navigation>
 
-            <List items={listFrom(props, props.app.systemRecommendations, mangaDetailPageUrl)} {...props} />
+            <List items={listFrom(props, app.systemRecommendations, mangaDetailPageUrl)} {...props} />
         </div>
     )
 }

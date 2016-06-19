@@ -1,9 +1,9 @@
-import React from 'react';
+import React from 'react'
 
 const Discussion = () => {
-    return (
-        <p>Discussion</p>
-    )
-};
+  return (
+    <p>Discussion</p>
+  )
+}
 
-export default Discussion;
+export default Discussion

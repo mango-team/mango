@@ -1,5 +1,5 @@
 const app = {
-  user: {
+  currentUser: {
     id: '1'
   },
   systemRecommendations: [

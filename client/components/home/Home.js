@@ -1,37 +1,38 @@
-import React from 'react';
-import { Link } from 'react-router';
+import React from 'react'
+import { Link } from 'react-router'
 
-import HomeNavigation from '../shared/HomeNavigation';
-import List from '../shared/List';
-import listFrom, { mangaDetailPageUrl, mangaChapterPageUrl } from '../helpers/listFrom';
+import HomeNavigation from '../shared/HomeNavigation'
+import List from '../shared/List'
+import listFrom, { mangaDetailPageUrl, mangaChapterPageUrl } from '../helpers/listFrom'
 
 const Home = (props) => {
-    return (
-        <div>
-            <HomeNavigation active="home" />
-            <div>
-                <List 
-                    title={<Link to="/feed/updates">Recent updates</Link>} 
-                    items={listFrom(props, props.app.updates, mangaChapterPageUrl)}
-                    {...props} />
+  const { app, currentUser } = props
+  return (
+    <div>
+      <HomeNavigation active='home' />
+      <div>
+        <List
+          title={<Link to='/feed/updates'>Recent updates</Link>}
+          items={listFrom(props, app.updates, mangaChapterPageUrl)}
+          {...props} />
 
-                <List 
-                    title={<Link to="/feed/resume">Resume viewing</Link>} 
-                    items={listFrom(props, props.user.history, mangaChapterPageUrl)}
-                    {...props} />
+        <List
+          title={<Link to='/feed/resume'>Resume viewing</Link>}
+          items={listFrom(props, currentUser.history, mangaChapterPageUrl)}
+          {...props} />
 
-                <List 
-                    title={<Link to="/feed/recommended-by-friends">Recommended by your friends</Link>} 
-                    items={listFrom(props, props.app.friendsRecommendations, mangaDetailPageUrl)}
-                    {...props} />
+        <List
+          title={<Link to='/feed/recommended-by-friends'>Recommended by your friends</Link>}
+          items={listFrom(props, app.friendsRecommendations, mangaDetailPageUrl)}
+          {...props} />
 
-                <List 
-                    title={<Link to="/feed/recommended">Recommended by our system</Link>} 
-                    items={listFrom(props, props.app.systemRecommendations, mangaDetailPageUrl)} 
-                    {...props} />
-            </div>
-        </div>
-    );
-};
+        <List
+          title={<Link to='/feed/recommended'>Recommended by our system</Link>}
+          items={listFrom(props, app.systemRecommendations, mangaDetailPageUrl)}
+          {...props} />
+      </div>
+    </div>
+  )
+}
 
-export default Home;
+export default Home

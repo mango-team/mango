@@ -2,11 +2,12 @@ import React from 'react'
 import { Link } from 'react-router'
 import { Navigation } from 'react-toolbox'
 
-const User = ({ user, children }) => {
+const User = ({ children, params, users }) => {
+  const user = users.find((user) => user.username === params.username)
   return (
     <div>
       <div className='header'>
-        <img src={ user.coverUrl} style={{width: '100%', height: '150px'}}/>
+        <img src={ user.coverUrl } style={{width: '100%', height: '150px'}}/>
         <Navigation type='horizontal'>
           <Link to={`/user/${user.username}`} className='active' data-react-toolbox='link'>Home</Link>
           <Link to={`/user/${user.username}/playlists`} data-react-toolbox='link'>Playlists</Link>
