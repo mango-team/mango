@@ -4,13 +4,13 @@ import { FontIcon } from 'react-toolbox'
 
 const ListItem = (props) => {
   const { item, user } = props
-  const ratings = () => {
+  const renderRatings = () => {
     let rating = 4
     return (
         <span>{rating}/10</span>
     )
   }
-  const likes = () => {
+  const renderLikes = () => {
     const { likes } = props
     const itemLikes = (likes || []).filter((like) => like.itemType === item.type && like.itemId === item.id)
     return (
@@ -21,9 +21,9 @@ const ListItem = (props) => {
   return (
     <div className='listing-item'>
         <div className='header'>
-            {ratings()}
+            {renderRatings()}
             <span> </span>
-            {likes()}
+            {renderLikes()}
         </div>
         <div className='content'>
             <Link to={item.url} title={item.description}>

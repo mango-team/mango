@@ -15,8 +15,9 @@ const mangas = [
       }
     ],
     status: 'completed',
-    importDate: new Date(),
-    releaseDate: new Date(),
+    importDate: Date.now(),
+    releaseDate: Date.now(),
+    publication: 'weekly',
     coverPictureUrl: 'http://z.mfcdn.net/store/manga/8/cover.jpg?1461292031',
     description: `Twelve years ago, the powerful Nine-Tailed Demon Fox attacked the ninja village of Konohagakure the village hidden in the leaves.
 The demon was defeated and sealed into the infant Naruto Uzumaki, by the Fourth Hokage who sacrificed his life to protect the village. 

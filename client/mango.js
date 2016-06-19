@@ -21,6 +21,9 @@ import UserSubscriptions from './components/user/Subscriptions'
 import SignIn from './components/SignIn'
 import SignUp from './components/SignUp'
 import Manga from './components/Manga'
+import MangaAbout from './components/manga/About'
+import MangaReviews from './components/manga/Reviews'
+import MangaDiscussion from './components/manga/Discussion'
 import MangaViewer from './components/MangaViewer'
 import NotFound from './components/NotFound'
 
@@ -54,7 +57,11 @@ const router = (
                     <IndexRoute component={WatchHistory} />
                     <Route path='search' component={SearchHistory} />
                 </Route>
-                <Route path='manga/:id/:name' component={Manga} />
+                <Route path='manga/:id/:name' component={Manga}>
+                    <IndexRoute component={MangaAbout} />
+                    <Route path='reviews' component={MangaReviews} />
+                    <Route path='discussion' component={MangaDiscussion} />
+                </Route>
                 <Route path='view/manga/:id/:name/:chapter(/:page)' component={MangaViewer} />
                 <Route path='*' component={NotFound} />
             </Route>
