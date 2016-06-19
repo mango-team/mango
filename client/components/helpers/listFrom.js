@@ -1,30 +1,26 @@
-const listFrom = (props, list, callback) => {
+const listFrom = (props, list, source, callback) => {
   const items = []
   if (Array.isArray(list)) {
-    const { mangas } = props
-
     list.forEach((listItem) => {
-      if (listItem && listItem.type === 'manga') {
-        const manga = mangas.find((m) => m.id === listItem.id)
-        if (manga) {
-          let additionalData = {}
-          if (typeof callback === 'function') {
-            additionalData = callback({listItem, manga, list, mangas})
-          }
-          const item = Object.assign({}, manga, additionalData)
-          items.push(item)
+      const sourceItem = source.find((m) => m.id === listItem.id)
+      if (sourceItem) {
+        let additionalData = {}
+        if (typeof callback === 'function') {
+          additionalData = callback({listItem, sourceItem, list, source})
         }
+        const item = Object.assign({}, sourceItem, additionalData)
+        items.push(item)
       }
     })
   }
   return items
 }
 
-export const mangaDetailPageUrl = ({ manga }) => {
-  return { url: `/manga/${manga.id}/${manga.name}` }
+export const detailPage = ({ sourceItem: item }) => {
+  return { url: `/${item.type}/${item.id}/${item.name}` }
 }
 
-export const mangaChapterPageUrl = ({ manga, listItem }) => {
+export const mangaChapterPageUrl = ({ sourceItem: manga, listItem }) => {
   return { url: `/view/manga/${manga.id}/${manga.name}/${listItem.chapter}/${listItem.page}` }
 }
 

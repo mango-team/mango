@@ -3,9 +3,9 @@ import List from '../shared/List'
 import listFrom, { mangaChapterPageUrl } from '../helpers/listFrom'
 
 const Resume = (props) => {
-  const { currentUser } = props
+  const { currentUser, mangas } = props
   return (
-    <List items={listFrom(props, currentUser.history, mangaChapterPageUrl)} {...props} />
+    <List items={listFrom(props, currentUser.history, mangas, mangaChapterPageUrl)} {...props} />
   )
 }
 

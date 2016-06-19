@@ -3,10 +3,10 @@ import { Link } from 'react-router'
 import { Navigation } from 'react-toolbox'
 
 import List from '../shared/List'
-import listFrom, { mangaDetailPageUrl } from '../helpers/listFrom'
+import listFrom, { detailPage } from '../helpers/listFrom'
 
 const RecommendedByFriends = (props) => {
-  const { app } = props
+  const { app, mangas } = props
   return (
     <div>
       <Navigation type='horizontal'>
@@ -14,7 +14,7 @@ const RecommendedByFriends = (props) => {
         <Link to='/feed/recommended-by-friends' data-react-toolbox='link'>Recommended by your friends</Link>
       </Navigation>
 
-      <List items={listFrom(props, app.friendsRecommendations, mangaDetailPageUrl)} {...props} />
+      <List items={listFrom(props, app.friendsRecommendations, mangas, detailPage)} {...props} />
     </div>
   )
 }
