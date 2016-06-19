@@ -1,5 +1,5 @@
-function app(state = [], action) {
-    return state;
+function app (state = [], action) {
+  return state
 }
 
-export default app;
+export default app

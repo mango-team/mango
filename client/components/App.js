@@ -1,23 +1,42 @@
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
-import * as actionCreators from '../actions/actionCreators';
-import Layout from './Layout';
+import { bindActionCreators } from 'redux'
+import { connect } from 'react-redux'
+import * as actionCreators from '../actions/actionCreators'
+import Layout from './Layout'
 
-function mapStateToProps({ authors, users, providers, app, mangas, chapters }) {
-    return {
-        authors,
-        users,
-        providers,
-        app,
-        mangas,
-        chapters
-    }
+function mapStateToProps (props) {
+  const {
+    app,
+    authors,
+    chapterPages,
+    chapters,
+    comments,
+    likes,
+    mangas,
+    providers,
+    ratings,
+    users,
+    views
+  } = props
+
+  return {
+    app,
+    authors,
+    chapterPages,
+    chapters,
+    comments,
+    likes,
+    mangas,
+    providers,
+    ratings,
+    users,
+    views
+  }
 }
 
-function mapDispatchToProps(dispatch) {
-    return bindActionCreators(actionCreators, dispatch);
+function mapDispatchToProps (dispatch) {
+  return bindActionCreators(actionCreators, dispatch)
 }
 
-const App = connect(mapStateToProps, mapDispatchToProps)(Layout);
+const App = connect(mapStateToProps, mapDispatchToProps)(Layout)
 
-export default App;
+export default App

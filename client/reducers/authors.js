@@ -1,5 +1,5 @@
-function authors(state = [], action) {
-    return state;
+function authors (state = [], action) {
+  return state
 }
 
-export default authors;
+export default authors

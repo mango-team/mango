@@ -13,7 +13,7 @@ const RecommendedByFriends = (props) => {
                 <Link to="/feed/recommended-by-friends"  data-react-toolbox="link">Recommended by your friends</Link>
             </Navigation>
             
-            <List items={listFrom(props, props.app.friendsRecommendations, mangaDetailPageUrl)} />
+            <List items={listFrom(props, props.app.friendsRecommendations, mangaDetailPageUrl)} {...props} />
         </div>
     )
 }

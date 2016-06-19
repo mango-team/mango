@@ -1,41 +1,51 @@
-import { createStore, compose } from 'redux';
-import { syncHistoryWithStore } from 'react-router-redux';
-import { browserHistory } from 'react-router';
+import { createStore, compose } from 'redux'
+import { syncHistoryWithStore } from 'react-router-redux'
+import { browserHistory } from 'react-router'
 
 // import the root reducer
-import rootReducer from './reducers/index';
+import rootReducer from './reducers/index'
 
-//Data
-import authors from './data/authors';
-import providers from './data/providers';
-import users from './data/users';
-import app from './data/app';
-import chapters from './data/chapters';
-import mangas from './data/mangas';
+// data
+import app from './data/app'
+import authors from './data/authors'
+import chapterPages from './data/chapterPages'
+import chapters from './data/chapters'
+import comments from './data/comments'
+import likes from './data/likes'
+import mangas from './data/mangas'
+import providers from './data/providers'
+import ratings from './data/ratings'
+import users from './data/users'
+import views from './data/views'
 
 // create an object for the default data
 const defaultState = {
-    authors,
-    providers,
-    users,
-    app,
-    chapters,
-    mangas
-};
+  app,
+  authors,
+  chapterPages,
+  chapters,
+  comments,
+  likes,
+  mangas,
+  providers,
+  ratings,
+  users,
+  views
+}
 
 const enhancers = compose(
     window.devToolsExtension ? window.devToolsExtension() : f => f
-);
+)
 
-const store = createStore(rootReducer, defaultState, enhancers);
+const store = createStore(rootReducer, defaultState, enhancers)
 
-export const history = syncHistoryWithStore(browserHistory, store);
+export const history = syncHistoryWithStore(browserHistory, store)
 
-if(module.hot) {
-    module.hot.accept('./reducers/', () => {
-        const nextRootReducer = require('./reducers/index').default;
-        store.replaceReducer(nextRootReducer);
-    })
+if (module.hot) {
+  module.hot.accept('./reducers/', () => {
+    const nextRootReducer = require('./reducers/index').default
+    store.replaceReducer(nextRootReducer)
+  })
 }
 
-export default store;
+export default store

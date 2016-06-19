@@ -4,7 +4,7 @@ import listFrom, { mangaChapterPageUrl } from '../helpers/listFrom';
 
 const Resume = (props) => {
     return (
-        <List items={listFrom(props, props.user.history, mangaChapterPageUrl)} />
+        <List items={listFrom(props, props.user.history, mangaChapterPageUrl)} {...props}  />
     )
 };
 

@@ -1,5 +1,5 @@
-function providers(state = [], action) {
-    return state;
+function providers (state = [], action) {
+  return state
 }
 
-export default providers;
+export default providers

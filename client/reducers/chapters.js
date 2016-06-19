@@ -1,5 +1,5 @@
-function chapters(state = [], action) {
-    return state;
+function chapters (state = [], action) {
+  return state
 }
 
-export default chapters;
+export default chapters
