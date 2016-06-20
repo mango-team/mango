@@ -11,7 +11,7 @@ const app = {
   friendsRecommendations: [
     {
       type: 'manga',
-      id: 1
+      id: 2
     }
   ],
   trending: [

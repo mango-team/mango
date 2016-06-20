@@ -10,6 +10,8 @@ import likes from './likes'
 import mangas from './mangas'
 import providers from './providers'
 import ratings from './ratings'
+import recommendations from './recommendations'
+import subscriptions from './subscriptions'
 import users from './users'
 import views from './views'
 
@@ -24,6 +26,8 @@ const state = {
   mangas,
   providers,
   ratings,
+  recommendations,
+  subscriptions,
   users,
   views
 }

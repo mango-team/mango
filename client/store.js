@@ -15,6 +15,8 @@ import likes from './data/likes'
 import mangas from './data/mangas'
 import providers from './data/providers'
 import ratings from './data/ratings'
+import recommendations from './data/recommendations'
+import subscriptions from './data/subscriptions'
 import users from './data/users'
 import views from './data/views'
 
@@ -29,6 +31,8 @@ const defaultState = {
   mangas,
   providers,
   ratings,
+  recommendations,
+  subscriptions,
   users,
   views
 }

@@ -1,8 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router'
 import { Navigation } from 'react-toolbox'
+import childrenWithProps from './helpers/childrenWithProps'
 
-const User = ({ children, params, users }) => {
+const User = (props) => {
+  const { children, params, users } = props
   const user = users.find((user) => user.username === params.username)
   return (
     <div>
@@ -23,7 +25,7 @@ const User = ({ children, params, users }) => {
           </h3>
         </div>
       </div>
-      { children }
+      { childrenWithProps(props, { user }) }
     </div>
   )
 }

@@ -14,6 +14,8 @@ function mapStateToProps (props) {
     mangas,
     providers,
     ratings,
+    recommendations,
+    subscriptions,
     users,
     views
   } = props
@@ -28,6 +30,8 @@ function mapStateToProps (props) {
     mangas,
     providers,
     ratings,
+    recommendations,
+    subscriptions,
     users,
     views
   }
