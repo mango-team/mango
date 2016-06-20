@@ -1,6 +1,7 @@
 import React from 'react'
 
-const About = ({ manga }) => {
+const About = ({ manga, views }) => {
+    const mangaViews = views.filter(view => view.itemType == 'manga' && view.itemId == manga.id)
   return (
     <div>
         <div>About {manga.name}</div>
@@ -10,7 +11,7 @@ const About = ({ manga }) => {
                 <dt>Released</dt>
                 <dd>{new Date(manga.releaseDate).toTimeString()}</dd>
                 <dt>Views</dt>
-                <dd></dd>
+                <dd>{mangaViews.length}</dd>
                 <dt>Author(s)</dt>
                 <dd></dd>
                 <dt>Artist(s)</dt>
