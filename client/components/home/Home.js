@@ -4,16 +4,18 @@ import { Link } from 'react-router'
 import HomeNavigation from '../shared/HomeNavigation'
 import List from '../shared/List'
 import listFrom, { detailPage, mangaChapterPageUrl } from '../helpers/listFrom'
+import getUpdatedMangas from '../../api/getUpdatedMangas'
 
 const Home = (props) => {
-  const { app, currentUser, mangas } = props
+  const { app, currentUser, mangas, chapters } = props
+  const updates = getUpdatedMangas({ mangas, chapters, take: 100 })
   return (
     <div>
       <HomeNavigation active='home' />
       <div>
         <List
           title={<Link to='/feed/updates'>Recent updates</Link>}
-          items={listFrom(props, app.updates, mangas, mangaChapterPageUrl)}
+          items={listFrom(props, updates, mangas, detailPage)}
           {...props} />
 
         <List
