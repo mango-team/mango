@@ -21,16 +21,7 @@ const users = [
     ],
     settings: {
 
-    },
-    history: [
-      {
-        type: 'manga',
-        id: '1',
-        date: Date.now(),
-        chapter: '1',
-        page: 1
-      }
-    ]
+    }
   }
 ]
 

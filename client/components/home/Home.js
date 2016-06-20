@@ -5,22 +5,22 @@ import HomeNavigation from '../shared/HomeNavigation'
 import List from '../shared/List'
 import listFrom, { detailPage, mangaChapterPageUrl } from '../helpers/listFrom'
 import getUpdatedMangas from '../../api/getUpdatedMangas'
+import getLastViewed from '../../api/getLastViewed'
 
 const Home = (props) => {
-  const { app, currentUser, mangas, chapters } = props
-  const updates = getUpdatedMangas({ mangas, chapters, take: 100 })
+  const { app, mangas, chapters } = props
   return (
     <div>
       <HomeNavigation active='home' />
       <div>
         <List
           title={<Link to='/feed/updates'>Recent updates</Link>}
-          items={listFrom(props, updates, mangas, detailPage)}
+          items={listFrom(props, getUpdatedMangas({ mangas, chapters, take: 10 }), mangas, detailPage)}
           {...props} />
 
         <List
           title={<Link to='/feed/resume'>Resume viewing</Link>}
-          items={listFrom(props, currentUser.history, mangas, mangaChapterPageUrl)}
+          items={listFrom(props, getLastViewed(props, 10), mangas, mangaChapterPageUrl)}
           {...props} />
 
         <List
