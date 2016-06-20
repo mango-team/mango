@@ -13,7 +13,7 @@ class MangaViewer extends React.Component {
   componentWillMount () {
     const props = this.props
     const { mangas, chapters, chapterPages, params, currentUser } = props
-    const manga = mangas.find(manga => manga.id === params.id)
+    const manga = mangas.find(manga => manga.id == params.id)
     let chapter
     let page
 

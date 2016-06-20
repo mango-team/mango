@@ -1,7 +1,9 @@
 import React from 'react'
+import { Link } from 'react-router'
 
-const About = ({ manga, views }) => {
-    const mangaViews = views.filter(view => view.itemType == 'manga' && view.itemId == manga.id)
+const About = ({ manga, views, chapters }) => {
+  const mangaViews = views.filter(view => view.itemType === 'manga' && view.itemId == manga.id)
+  const mangaChapters = chapters.filter(chapter => chapter.mangaId == manga.id)
   return (
     <div>
         <div>About {manga.name}</div>
@@ -30,6 +32,22 @@ const About = ({ manga, views }) => {
                 <dd>{manga.tags.join(', ')}</dd>
             </dl>
         </div>
+        <table>
+            <caption>Chapters</caption>
+            <thead>
+                <tr>
+                    <th>Chapter Name</th>
+                    <th>Date Added</th>
+                </tr>
+            </thead>
+            <tbody>
+                {mangaChapters.map(chapter =>
+                    <tr key={chapter.id}>
+                        <td><Link to={`/view/manga/${manga.id}/${manga.name}/${chapter.number}/1`}>{chapter.title}</Link></td>
+                        <td>{chapter.importDate}</td>
+                    </tr>)}
+            </tbody>
+        </table>
     </div>
   )
 }

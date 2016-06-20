@@ -5,7 +5,7 @@ import childrenWithProps from './helpers/childrenWithProps'
 
 const Manga = (props) => {
   const { mangas, params } = props
-  const manga = mangas.find(manga => manga.id === params.id)
+  const manga = mangas.find(manga => manga.id == params.id)
   return (
     <div>
         <div className='header'>

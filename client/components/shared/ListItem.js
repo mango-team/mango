@@ -12,7 +12,7 @@ const ListItem = (props) => {
   }
   const renderLikes = () => {
     const { likes } = props
-    const itemLikes = (likes || []).filter((like) => like.itemType === item.type && like.itemId === item.id)
+    const itemLikes = (likes || []).filter((like) => like.itemType === item.type && like.itemId == item.id)
     return (
         <span>{itemLikes.length} <FontIcon value='favorite' onClick={() => props.like(item.type, item.id, currentUser.id, Date.now()) } /></span>
     )

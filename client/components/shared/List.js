@@ -6,7 +6,9 @@ const List = (props) => {
   return (
     <div>
       {title}
-      {items && items.map((item, index) => <ListItem key={index} item={item} {...props} />)}
+      <div style={{ display: 'flex' }}>
+        {items && items.map((item, index) => <ListItem key={index} item={item} {...props} />)}
+      </div>
       {children}
     </div>
   )

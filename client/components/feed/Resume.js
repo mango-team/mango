@@ -1,13 +1,12 @@
 import React from 'react'
 import List from '../shared/List'
 import listFrom, { mangaChapterPageUrl } from '../helpers/listFrom'
-import getLastViewedItemIds from '../../api/getLastViewedItemIds'
+import getLastViewed from '../../api/getLastViewed'
 
 const Resume = (props) => {
-  const { mangas, views } = props
-  const history = getLastViewedItemIds({ views: views.filter(view => view.itemType === 'manga'), take: 10 }).map(id => mangas.find(manga => manga.id === id))
+  const { mangas } = props
   return (
-    <List items={listFrom(props, history, mangas, mangaChapterPageUrl)} {...props} />
+    <List items={listFrom(props, getLastViewed(props, 100), mangas, mangaChapterPageUrl)} {...props} />
   )
 }
 

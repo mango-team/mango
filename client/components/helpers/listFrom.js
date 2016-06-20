@@ -2,7 +2,7 @@ const listFrom = (props, list, source, callback) => {
   const items = []
   if (Array.isArray(list)) {
     list.forEach((listItem) => {
-      const sourceItem = source.find((m) => m.id === listItem.id)
+      const sourceItem = source.find((m) => m.id == listItem.id)
       if (sourceItem) {
         let additionalData = {}
         if (typeof callback === 'function') {

@@ -20,7 +20,7 @@ const getUpdatedMangaIds = (chapters, size) => {
 }
 
 const getUpdatedMangas = ({ take, chapters, mangas }) => {
-  return getUpdatedMangaIds(chapters, take).map(mangaId => mangas.find(manga => manga.id === mangaId))
+  return getUpdatedMangaIds(chapters, take).map(mangaId => mangas.find(manga => manga.id == mangaId))
 }
 
 export default getUpdatedMangas

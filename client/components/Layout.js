@@ -14,7 +14,7 @@ const PageLayout = (props) => {
 
   if (userConnected) {
     userId = app.currentUser.id
-    currentUser = users.find((value, index) => value.id === userId)
+    currentUser = users.find((value, index) => value.id == userId)
     userConnected = typeof currentUser !== 'undefined'
   }
   return (
