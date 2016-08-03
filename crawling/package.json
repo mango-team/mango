@@ -1,0 +1,17 @@
+{
+  "name": "crawler",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Alidou Ouedraogo",
+  "license": "ISC",
+  "dependencies": {
+    "download": "^4.4.3",
+    "js-crawler": "^0.3.8",
+    "phantom": "^0.9.0"
+  }
+}

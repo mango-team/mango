@@ -1,0 +1,15 @@
+{
+  "name": "crawler",
+  "version": "3.0.0",
+  "description": "",
+  "main": "run.js",
+  "scripts": {
+    "start": "electron run"
+  },
+  "keywords": [],
+  "author": "Alidou Ouedraogo",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.3.4"
+  }
+}
