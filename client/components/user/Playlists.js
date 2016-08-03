@@ -2,7 +2,7 @@ import React from 'react'
 
 const Playlists = () => {
   return (
-    <div>Playlists</div>
+    <div>Coming Soon</div>
   )
 }
 

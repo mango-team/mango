@@ -2,7 +2,7 @@ import React from 'react'
 
 const Search = () => {
   return (
-    <p>Search</p>
+    <p>Coming Soon</p>
   )
 }
 

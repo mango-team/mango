@@ -2,7 +2,7 @@ import React from 'react'
 
 const About = () => {
   return (
-    <p>About</p>
+    <p>Coming Soon</p>
   )
 }
 

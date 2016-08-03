@@ -3,7 +3,7 @@ import React from 'react'
 const Discussion = () => {
   return (
     <div>
-        Discussion
+        Coming Soon
     </div>
   )
 }

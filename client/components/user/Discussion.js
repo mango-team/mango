@@ -2,7 +2,7 @@ import React from 'react'
 
 const Discussion = () => {
   return (
-    <p>Discussion</p>
+    <p>Coming Soon</p>
   )
 }
 

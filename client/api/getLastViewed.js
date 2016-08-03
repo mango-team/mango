@@ -24,7 +24,7 @@ const getLastPageViewed = (userMangas, props) => {
 const getLastViewed = (props) => {
   const { currentUser, views, take, mangas } = props
   const userMangas = views.filter(view => view.userId == currentUser.id && view.itemType == 'manga') // only select mangas from the current user
-                          .sort((a, b) => new Date(a.date) - new Date(b.date)) // order they by view date descending
+                          .sort((a, b) => new Date(a.date) - new Date(b.date)) // order them by view date descending
                           .map(view => view.itemId) // select the manga id
                           .filter((elem, pos, arr) => arr.indexOf(elem) == pos) // remove duplicates
                           .slice(0, take) // select number of mangas requested
