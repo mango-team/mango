@@ -1,16 +1,33 @@
-var ipc = require("electron").ipcRenderer;
+(function() {
+    
+    const ipc = require("electron").ipcRenderer;    
+    const remote = require('electron').remote;
+    
+    const mwId = remote.getCurrentWindow().id;
+    
+    function determineCurrentPage() {
+        debugger;
+        console.log(window.location.pathname.split('/').length);
+        console.log(window.location.pathname);
+        if(window.location.pathname.equals('/alphabetical'))
+        return 'pages/getManga.js';
+        else if(window.location.pathname.split('/').length == 3 || window.location.pathname.split('/').length == 4)       
+        return 'pages/getChapters.js';
+        else if (window.location.pathname.split('/').length == 2)
+        return 'pages/getMangaInfo.js';
 
+        ipc.send('log-error', "No page matching");
+        
+        //debugger;
+        return 'no-page-matching.js';
+    }
+    
+    setTimeout(function (){   
+        var currentPage = determineCurrentPage();          
 
-var currentPage; 
-if (window.location.search.toLowerCase().indexOf('idres') >= 0 )
-    currentPage = 'crawl-pro-group.js';
-else if(window.location.search.toLowerCase().indexOf('idclient') >= 0 )
-    currentPage = 'crawl-pro.js';
-else if(window.location.search.toLowerCase().indexOf('idbien') >= 0 )
-    currentPage = 'crawl-property.js';
-else if(window.location.pathname.toLowerCase().indexOf('recherche-agence-immobiliere-belgique') >= 0)
-    currentPage = 'crawl-pros.js';
-
-if(currentPage) {
-    ipc.send('location-found', currentPage);
-}
+        var data = {currentPage, mwId};
+        if(currentPage) 
+            ipc.send('location-found', data);
+    }, 500);
+    
+})();
