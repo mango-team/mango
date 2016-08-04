@@ -1,0 +1,25 @@
+[
+  {
+    "id": "1",
+    "username": "oalidou",
+    "firstName": "Alidou",
+    "lastName": "Ouedraogo",
+    "avatarUrl": "http://enzosakay.com/images/Profilelogo.png",
+    "coverUrl": "http://yt3.ggpht.com/-6sFSluVE_eg/U1AwXf_lXaI/AAAAAAAAAAY/TLvrBD1eRQQ/w2120-fcrop64=1,00005a57ffffa5a8-nd-c0xffffffff-rj-k-no/channels4_banner.jpg",
+    "subscriptions": [
+      {
+        "type": "manga",
+        "date": "2012-04-23T18:25:43.511Z",
+        "providerId": "1",
+        "manga": "Naruto",
+        "notifyOnNewChapter": true,
+        "lastChapter": {
+          "id": "1",
+          "readOn": "2012-04-23T18:25:43.511Z"
+        }
+      }
+    ],
+    "settings": {
+    }
+  }
+]

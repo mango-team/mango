@@ -58,6 +58,7 @@
     "expect": "^1.18.0",
     "expect-jsx": "^2.5.1",
     "extract-text-webpack-plugin": "^1.0.1",
+    "json-loader": "^0.5.4",
     "mocha": "^2.4.5",
     "node-sass": "^3.7.0",
     "normalize.css": "^4.1.1",

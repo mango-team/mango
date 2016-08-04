@@ -1,0 +1,6 @@
+[
+  { "id": "1", "itemType": "manga", "itemId": "1", "userId": "1", "text": "Looks interesting! Or not.", "date": "2012-04-23T18:25:43.511Z" },
+  { "id": "2", "itemType": "chapter", "itemId": "1", "userId": "1", "text": "Looks interesting! Or not.", "date": "2012-04-23T18:25:43.511Z" },
+  { "id": "3", "itemType": "page", "itemId": "1", "userId": "1", "text": "Looks interesting! Or not.", "date": "2012-04-23T18:25:43.511Z" },
+  { "id": "4", "itemType": "user", "itemId": "1", "userId": "1", "text": "Looks interesting! Or not.", "date": "2012-04-23T18:25:43.511Z" }
+]
